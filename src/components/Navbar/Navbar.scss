@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+nav {
+  padding: 16px 36px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 6px 16px hsl(200, 15, 95%);
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    ul,
+    .nav_menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      gap: 36px;
+    }
+    li {
+      a {
+        padding: 8px;
+        letter-spacing: 0.2rem;
+        font-size: 0.9rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: hsl(0, 0, 60%);
+        transition: color 150ms ease-out;
+        &:hover {
+          color: hsl(0, 0, 1%);
+        }
+      }
+    }
+  }
+}
+
+.logo-text {
+  font-size: 2.3rem;
+  line-height: 1;
+  font-weight: 500;
+  position: relative;
+  font-family: "lobster";
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: black;
+    top: calc(100% / 2.5);
+    margin-left: 14px;
+    border-radius: 2px;
+  }
+}
+
+.nav--button {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  color: rgb(0, 0, 0);
+  border: solid black 2px;
+  background: rgb(255, 255, 255);
+  transition-property: color, background;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover {
+    color: rgb(255, 255, 255);
+    background: black;
+  }
+}
+
+.wrap .mobile-navigation {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .wrap .navigation {
+    display: none;
+  }
+
+  .wrap .mobile-navigation {
+    display: flex;
+
+    align-items: center;
+  }
+
+  .wrap .mobile-navigation .hamburger {
+    position: absolute;
+    top: 1.2%;
+    right: 0;
+    font-size: 3.3rem;
+    cursor: pointer;
+  }
+
+  .wrap .mobile-navigation .closest {
+    position: absolute;
+    top: 1.44%;
+    right: 0.55%;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  #logoMobile {
+    display: none;
+  }
+
+  .wrap {
+    opacity: 1;
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        top: 68px;
+        right: 0;
+        height: 32.25%;
+        width: 100%;
+        background-color: #fff;
+        border-top: 2px solid black;
+
+        li {
+          padding: 0px 0;
+          & a:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
