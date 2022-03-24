@@ -1,12 +1,12 @@
 import "./App.scss";
-import Homepage from "./components/pages/Homepage/Homepage";
+import ItemListContainer from "./pages/ItemListContainer/ItemListContainer";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Homepage />
+      <ItemListContainer />
     </div>
   );
 }

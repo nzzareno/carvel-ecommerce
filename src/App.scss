@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   background-color: #f3f3f3;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 672px) {
+  body {
+    overflow: auto;
+  }
 }

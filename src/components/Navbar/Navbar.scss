@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 
 nav {
-  padding: 16px 36px;
+  padding: 16px 7px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 6px 16px hsl(200, 15, 95%);
@@ -24,7 +24,7 @@ nav {
       a {
         padding: 8px;
         letter-spacing: 0.2rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-decoration: none;
         text-transform: uppercase;
         color: hsl(0, 0, 60%);
@@ -83,7 +83,7 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 672px) {
   .wrap .navigation {
     display: none;
   }
@@ -121,13 +121,12 @@ nav {
         display: flex;
         flex-direction: column;
         position: absolute;
-
+        z-index: 9999;
         top: 68px;
         right: 0;
-        height: 32.25%;
+        height: 32.28%;
         width: 100%;
         background-color: #fff;
-        border-top: 2px solid black;
 
         li {
           padding: 0px 0;

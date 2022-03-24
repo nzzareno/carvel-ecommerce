@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavLinks = (props) => {
   const animateFrom = { opacity: 0, y: -40 };
@@ -36,6 +37,7 @@ const NavLinks = (props) => {
           >
             Connect
           </motion.button>
+          <CartWidget />
         </ul>
       </div>
     </div>
