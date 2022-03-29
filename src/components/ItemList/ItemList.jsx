@@ -38,7 +38,10 @@ class ItemList extends React.Component {
           imageUrl: men,
           size: 'large',
           id: 5
-        }
+        },
+
+        
+        
       ]
     };
   }

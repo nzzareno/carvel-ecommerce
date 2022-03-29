@@ -1,0 +1,138 @@
+.counter-btn-cart {
+  color: rgb(255, 255, 255);
+  background-color: #8498a7;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  margin-top: 5px;
+  width: 250px;
+  padding: 5px 14px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 800;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: #90a2b0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.ctrl {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background-color: #fafafa;
+  border-radius: 3px;
+  font-size: 30px;
+}
+.ctrl-counter {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  color: #333c48;
+  text-align: center;
+
+  overflow: hidden;
+}
+.ctrl-counter.is-input .ctrl-counter-num {
+  opacity: 10;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+.ctrl-counter.is-input .ctrl-counter-input {
+  opacity: 1;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+.ctrl-counter-input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  outline: none;
+  border: 1px solid #e7e7e7;
+  color: #00000058;
+  font-size: 30px;
+  height: 50px;
+  margin-top: 24.5px;
+  text-align: center;
+  overflow: hidden;
+  opacity: 1;
+
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+.ctrl-counter-num {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 100px;
+
+  opacity: 1;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+
+// safari, chrome, opera... arrow inputs
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// firefox
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ctrl-button {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background-color: #8498a7;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+.ctrl-button:hover {
+  background-color: #90a2b0;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+.ctrl-button:active {
+  background-color: #778996;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+.ctrl-button-decrement {
+  border-radius: 3px 0 0 3px;
+}
+.ctrl-button-increment {
+  border-radius: 0 3px 3px 0;
+}
+
+.offline-ctrl {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  cursor: not-allowed;
+  background-color: #8498a73d;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}

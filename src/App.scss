@@ -2,8 +2,9 @@
 
 body {
   font-family: "Open Sans";
-  background-color: #f3f3f3;
-  overflow: hidden;
+  background-color: #fafafa;
+  height: 100%;
+ 
 }
 
 @media screen and (max-width: 672px) {
@@ -11,3 +12,4 @@ body {
     overflow: auto;
   }
 }
+

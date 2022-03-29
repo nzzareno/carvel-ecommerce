@@ -2,10 +2,97 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (-webkit-device-pixel-ratio: .25) {
+  :root {
+    zoom: 3;
+  }
+}
+
+  
+
+@media (-webkit-device-pixel-ratio: .50) {
+  :root {
+    zoom: 2;
+  }
+}
+ 
+@media (-webkit-device-pixel-ratio: 0.75) {
+  :root {
+    zoom: 1.333;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 0.8) {
+  :root {
+    zoom: 1.25;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 0.9) {
+  :root {
+    zoom: 1.111;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  :root {
+    zoom: 0.667;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  :root {
+    zoom: 0.8;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.1) {
+  :root {
+    zoom: 0.91;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.75) {
+  :root {
+    zoom: 0.5717;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 2) {
+  :root {
+    zoom: 0.5002;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 2.5) {
+  :root {
+    zoom: 0.4002;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 3) {
+  :root {
+    zoom: 0.4599;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 4) {
+  :root {
+    zoom: 0.3;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 5) {
+  :root {
+    zoom: 0.279;
+  }
 }
