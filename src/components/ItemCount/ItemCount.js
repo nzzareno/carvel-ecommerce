@@ -16,11 +16,15 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <div>
       <h5 style={{ marginTop: "-10px" }}>
-        Nike LEGACY91 TECH
         {item > stock ? (
-          <small style={{ textDecoration: "line-through" }}>(sin stock)</small>
+          <span id="stock-small">
+            <small style={{ textDecoration: "line-through" }}>
+              Nike LEGACY91 TECH HAT
+            </small>
+            <small> (sin stock)</small>
+          </span>
         ) : (
-          <small>{item > 0 && `(${item})`}</small>
+          <small>{item > 0 && ` Nike LEGACY91 TECH HAT (${item})`}</small>
         )}
       </h5>
       <div className="ctrl">
@@ -40,9 +44,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           <input
             onChange={item > stock ? null : handlerChange}
             value={item > stock ? "sin stock" : item}
-            className={item > stock ? "offline-counter-input" : "ctrl-counter-input"}
+            className={
+              item > stock ? "offline-counter-input" : "ctrl-counter-input"
+            }
             type={item > stock ? "text" : "number"}
-            
           />
         </div>
         <div
@@ -56,7 +61,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </div>
 
       <div>
-        <button className={item > stock ? 'offline-counter-btn-cart' : "counter-btn-cart" }>Add to cart</button>
+        <button
+          className={
+            item > stock ? "offline-counter-btn-cart" : "counter-btn-cart"
+          }
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );

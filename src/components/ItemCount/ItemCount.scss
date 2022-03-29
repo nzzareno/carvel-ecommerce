@@ -72,6 +72,10 @@
   transition: opacity 100ms ease-in;
 }
 
+#stock-small {
+  text-decoration: none;
+}
+
 .offline-counter-input {
   width: 100%;
   margin: 0;
@@ -92,7 +96,6 @@
   -webkit-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
 }
-
 
 .ctrl-counter-num {
   position: absolute;
