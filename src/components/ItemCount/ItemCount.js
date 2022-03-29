@@ -20,7 +20,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         {item > stock ? (
           <small style={{ textDecoration: "line-through" }}>(sin stock)</small>
         ) : (
-          <small>({item})</small>
+          <small>{item > 0 && `(${item})`}</small>
         )}
       </h5>
       <div className="ctrl">
@@ -38,12 +38,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </div>
         <div className="ctrl-counter">
           <input
-            onChange={handlerChange}
+            onChange={item > stock ? null : handlerChange}
             value={item > stock ? "sin stock" : item}
-            className="ctrl-counter-input"
+            className={item > stock ? "offline-counter-input" : "ctrl-counter-input"}
             type={item > stock ? "text" : "number"}
-            pattern="0-9"
-            min="0"
+            
           />
         </div>
         <div
@@ -57,7 +56,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </div>
 
       <div>
-        <button className="counter-btn-cart">Add to cart</button>
+        <button className={item > stock ? 'offline-counter-btn-cart' : "counter-btn-cart" }>Add to cart</button>
       </div>
     </div>
   );
