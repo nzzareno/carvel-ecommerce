@@ -13,6 +13,9 @@ nav {
   border-bottom: 2px solid #dbdbdb;
   border-radius: 5px;
   box-shadow: 0 6px 16px hsl(200, 15, 95%);
+ 
+  width: 100%;
+  z-index: 999;
   .nav__container {
     display: flex;
     justify-content: space-between;

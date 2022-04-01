@@ -2,29 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 body {
   font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (-webkit-device-pixel-ratio: .25) {
+@media (-webkit-device-pixel-ratio: 0.25) {
   :root {
     zoom: 3;
   }
 }
 
-  
-
-@media (-webkit-device-pixel-ratio: .50) {
+@media (-webkit-device-pixel-ratio: 0.5) {
   :root {
     zoom: 2;
   }
 }
- 
+
 @media (-webkit-device-pixel-ratio: 0.75) {
   :root {
     zoom: 1.333;
