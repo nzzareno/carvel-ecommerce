@@ -24,8 +24,9 @@ const ItemList = () => {
           );
         }
       }, 2000);
-    })
-      promesa.then((rta) => {
+    });
+    promesa
+      .then((rta) => {
         setCollection(rta);
       })
       .catch((err) => err);
@@ -40,7 +41,7 @@ const ItemList = () => {
         transition={{ duration: 4 }}
         className="title-collection"
       >
-        <CollectionTitle/>
+        <CollectionTitle />
       </motion.h1>
       {collection.map(({ id, ...otherCollectionProps }) => (
         <Item key={id} {...otherCollectionProps} />
@@ -48,6 +49,5 @@ const ItemList = () => {
     </div>
   );
 };
- 
 
 export default ItemList;

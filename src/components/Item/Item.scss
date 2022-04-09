@@ -6,12 +6,9 @@
   height: 35rem;
   background-color: #000000;
   border-radius: 5% 5% 0 0;
-  box-shadow: 
-    0 2px 2px 0 rgba(0,0,0,0.14), 
-    0 3px 1px -2px rgba(0,0,0,0.7), 
-    0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.7),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
- 
 }
 
 .image {
@@ -20,7 +17,6 @@
   background-size: cover;
   background-position: center;
 
- 
   cursor: pointer;
 }
 
@@ -37,7 +33,7 @@
 }
 
 .name {
-  width: 80%;
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -59,15 +55,13 @@
 
 .preview {
   display: flex;
-  
-   
+
   justify-content: space-between;
 }
 
-@media screen and (max-width:909px) {
-  
+@media screen and (max-width: 909px) {
   .collection-item {
-    width: 70%;
+    width:85%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,20 +71,31 @@
     background-color: #fafafa;
     border-radius: 5% 5% 0 0;
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
-   
+  }
+
+  .collection-preview {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0 0;
+    width: 100%;
   }
 
   .preview {
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
+  }
+
+  .title {
+    text-align: center;
+    margin-left: 75px;
   }
 
   .name {
     width: 100%;
     margin-bottom: 15px;
   }
-  
+
   .price {
     width: 17%;
   }

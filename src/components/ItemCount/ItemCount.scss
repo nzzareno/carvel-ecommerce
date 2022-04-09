@@ -1,22 +1,4 @@
-.counter-btn-cart {
-  color: rgb(255, 255, 255);
-  background-color: #8498a7;
-  cursor: pointer;
-  border: none;
-  font-size: 15px;
-  margin-top: 5px;
-  width: 250px;
-  padding: 5px 14px;
-  text-transform: uppercase;
-  font-family: monospace;
-  font-weight: 800;
-  border-radius: 3px;
-
-  &:hover {
-    background-color: #90a2b0;
-    transition: all 0.5s ease-in-out;
-  }
-}
+ 
 
 .ctrl {
   -webkit-box-flex: 0;
@@ -29,14 +11,14 @@
   -ms-flex-align: center;
   align-items: center;
 
-  background-color: #fafafa;
+  background-color: #ffffff;
   border-radius: 3px;
   font-size: 30px;
 }
 .ctrl-counter {
   position: relative;
-  width: 150px;
-  height: 100px;
+  width: 90px;
+  height: 53px;
   color: #333c48;
   text-align: center;
 
@@ -55,15 +37,15 @@
 .ctrl-counter-input {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 13px 0px 13px 0px;
   position: relative;
   z-index: 2;
   outline: none;
-  border: 1px solid #e7e7e7;
+  border: 0px solid #e7e7e7;
   color: #00000058;
-  font-size: 30px;
-  height: 50px;
-  margin-top: 24.5px;
+  font-size: 18px;
+  height: 30%;
+  background-color: white;
   text-align: center;
   overflow: hidden;
   opacity: 1;
@@ -126,22 +108,26 @@ input[type="number"] {
 }
 
 .ctrl-button {
-  width: 50px;
-  line-height: 50px;
+ 
+ line-height: 10.2px;
+ padding: 9px 5px;
+ 
+ width: 25px;
   text-align: center;
-  color: #fff;
+  color: #000;
   cursor: pointer;
-  background-color: #8498a7;
+  background: #FFD814;
+  border-color: #FCD200;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
 }
 .ctrl-button:hover {
-  background-color: #90a2b0;
+  background-color: #ecf401;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
 }
 .ctrl-button:active {
-  background-color: #778996;
+  background-color: #FFD814;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
 }

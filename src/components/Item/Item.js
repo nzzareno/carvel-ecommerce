@@ -30,13 +30,12 @@ const Item = ({ title, items }) => {
         className="preview"
       >
         {items
-          .filter((item, index) => index < 3)
+          .filter((index) => index < 3)
           .map(({ id, name, price, imageUrl }) => (
             <motion.div
               initial="hidden"
               animate="visible"
               variants={variants}
-              key={id}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="collection-item"
@@ -60,6 +59,7 @@ const Item = ({ title, items }) => {
                 animate="visible"
                 variants={variants}
                 className="collection-footer"
+                key={id}
               >
                 <span className="name">{name}</span>
                 <span className="price">${price}</span>

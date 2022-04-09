@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  height: 100%;
+}
+
 html,
 body {
   overscroll-behavior: none;

@@ -3,7 +3,7 @@ import NavLinks from "./NavLinks";
 
 const Navigation = () => {
   return (
-    <nav className="navigation">
+    <nav data-scroll-sticky className="navigation">
       <NavLinks />
     </nav>
   );

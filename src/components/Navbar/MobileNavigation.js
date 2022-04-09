@@ -1,7 +1,6 @@
 import NavLinks from "./NavLinks";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
 import { useState } from "react";
- 
 
 const MobileNavigation = () => {
   const [open, setOpen] = useState(false);

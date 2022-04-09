@@ -1,4 +1,3 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
 import "./ItemCount.scss";
 
@@ -9,66 +8,63 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     setItem(() => e.target.value);
   };
 
+  if (item < 0) {
+    setItem(0);
+  }
+
   if (stock) {
     onAdd = item;
   }
 
   return (
     <div>
-      <h5 style={{ marginTop: "-10px" }}>
-        {item > stock ? (
-          <span id="stock-small">
-            <small style={{ textDecoration: "line-through" }}>
-              Nike LEGACY91 TECH HAT
-            </small>
-            <small> (sin stock)</small>
-          </span>
-        ) : (
-          <small>{item > 0 && ` Nike LEGACY91 TECH HAT (${item})`}</small>
-        )}
-      </h5>
       <div className="ctrl">
         <div
-          className={
-            item > stock ? "offline-ctrl" : "ctrl-button ctrl-button-decrement"
-          }
-          onClick={
-            item > stock || stock === 0 || item <= 0
-              ? isDisabled
-              : () => setItem(item - 1)
-          }
+          className="ctrl-button ctrl-button-decrement"
+          onClick={() => setItem(item - 1)}
         >
           -
         </div>
         <div className="ctrl-counter">
           <input
-            onChange={item > stock ? null : handlerChange}
-            value={item > stock ? "sin stock" : item}
-            className={
-              item > stock ? "offline-counter-input" : "ctrl-counter-input"
-            }
-            type={item > stock ? "text" : "number"}
+            onChange={handlerChange}
+            value={item}
+            className="ctrl-counter-input"
+            type={"number"}
+            disabled
           />
         </div>
         <div
-          className={
-            item > stock ? "offline-ctrl" : "ctrl-button ctrl-button-increment"
-          }
-          onClick={item > stock ? isDisabled : () => setItem(item + 1)}
+          className="ctrl-button ctrl-button-increment"
+          onClick={() => setItem(item + 1)}
         >
           +
         </div>
       </div>
 
-      <div>
-        <button
-          className={
-            item > stock ? "offline-counter-btn-cart" : "counter-btn-cart"
-          }
-        >
-          Add to cart
-        </button>
+      <div className="a-button-stack">
+        <span className="a-declarative">
+          <span className="a-button a-spacing-small a-button-primary a-button-icon natc-enabled">
+            <span className="a-button-inner">
+              
+              <input
+                id="add-to-cart-button"
+                name="submit.add-to-cart"
+                title="Añadir a la cesta"
+                className="a-button-input"
+                type="submit"
+                value="Añadir a la cesta"
+              />
+              <span className="a-button-text" aria-hidden="true">
+                Add to cart
+              </span>
+            </span>
+          </span>
+        </span>
+
+  
       </div>
+      
     </div>
   );
 };
