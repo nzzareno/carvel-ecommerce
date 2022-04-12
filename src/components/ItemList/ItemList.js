@@ -1,27 +1,24 @@
 import React, { useEffect, useState } from "react";
-import PRODUCTS from "../Item/Products";
+import { PRODUCTS } from "../ItemListContainer/Products";
 import Item from "../Item/Item";
-import { motion } from "framer-motion";
-import CollectionTitle from "../Item/CollectionTitle";
+import CollectionTitle from "../CollectionTitle/CollectionTitle";
 import "./ItemList.scss";
+import { useParams } from "react-router-dom";
+import Spinner from "../ItemListContainer/Spinner";
 
 const ItemList = () => {
   const [collection, setCollection] = useState([]);
 
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+  const { id } = useParams();
 
   useEffect(() => {
+    console.log(id);
     const promesa = new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (collection) {
-          resolve(PRODUCTS);
+        if (id) {
+          resolve(PRODUCTS.filter((product) => product.category === id));
         } else {
-          reject(
-            "Hubo un problema con la carga de elementos, intentalo mas tarde..."
-          );
+          resolve(PRODUCTS.filter((product) => product.category === "Glasses"));
         }
       }, 2000);
     });
@@ -30,23 +27,37 @@ const ItemList = () => {
         setCollection(rta);
       })
       .catch((err) => err);
-  }, [collection]);
+  }, [id]);
 
   return (
-    <div className="shop-page">
-      <motion.h1
-        initial="hidden"
-        animate="visible"
-        variants={variants}
-        transition={{ duration: 4 }}
-        className="title-collection"
-      >
-        <CollectionTitle />
-      </motion.h1>
-      {collection.map(({ id, ...otherCollectionProps }) => (
-        <Item key={id} {...otherCollectionProps} />
-      ))}
-    </div>
+    <>
+      <h1 className="title-collection">
+        <CollectionTitle collection={collection} />
+      </h1>
+      <div className="shop-page">
+        {collection.length === 0 ? (
+          <div>
+            <Spinner />
+          </div>
+        ) : (
+          collection.map(
+            ({ id, name, imageUrl, price, categorie, color, brand, page }) => (
+              <Item
+                key={id}
+                id={id}
+                name={name}
+                imageUrl={imageUrl}
+                price={price}
+                page={page}
+                categorie={categorie}
+                brand={brand}
+                color={color}
+              />
+            )
+          )
+        )}
+      </div>
+    </>
   );
 };
 

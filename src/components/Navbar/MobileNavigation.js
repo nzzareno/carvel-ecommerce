@@ -1,6 +1,6 @@
-import NavLinks from "./NavLinks";
+import React, { useState } from "react";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
-import { useState } from "react";
+import NavLinks from "./NavLinks";
 
 const MobileNavigation = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ const MobileNavigation = () => {
       <div className="logo-wrap">
         <div>
           <h4 className="logo-text">
-            <a href="/#home">Carvel</a>
+            <a href="/">Carvel</a>
           </h4>
         </div>
       </div>

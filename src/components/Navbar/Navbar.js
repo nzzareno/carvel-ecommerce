@@ -1,14 +1,11 @@
- 
 import React from "react";
+import Navigation from "./Navigation";
 import MobileNavigation from "./MobileNavigation";
 import "./Navbar.scss";
-import Navigation from "./Navigation";
-
- 
 
 const Navbar = () => {
   return (
-    <div className='wrap'>
+    <div className="wrap">
       <Navigation />
       <MobileNavigation />
     </div>

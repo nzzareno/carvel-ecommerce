@@ -41,30 +41,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </div>
       </div>
-
-      <div className="a-button-stack">
-        <span className="a-declarative">
-          <span className="a-button a-spacing-small a-button-primary a-button-icon natc-enabled">
-            <span className="a-button-inner">
-              
-              <input
-                id="add-to-cart-button"
-                name="submit.add-to-cart"
-                title="Añadir a la cesta"
-                className="a-button-input"
-                type="submit"
-                value="Añadir a la cesta"
-              />
-              <span className="a-button-text" aria-hidden="true">
-                Add to cart
-              </span>
-            </span>
-          </span>
-        </span>
-
-  
-      </div>
-      
     </div>
   );
 };

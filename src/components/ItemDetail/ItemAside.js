@@ -1,13 +1,13 @@
 import React from "react";
-import ItemCount from "../../components/ItemCount/ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 
-const ItemAside = ({ sneakers }) => {
+const ItemAside = ({ jackets }) => {
   return (
     <div className="container-vertical">
       <aside style={{ width: "100%" }}>
         <div className="container-cuadrado">
           <div>
-            <h3>${sneakers.items[2].price}</h3>
+            <h3>${jackets.price}</h3>
           </div>
           <div>
             <p>and FREE Returns</p>
@@ -30,7 +30,7 @@ const ItemAside = ({ sneakers }) => {
             <h3 style={{ fontWeight: 500 }}>In stock.</h3>
           </div>
           <div>
-            <ItemCount initial={0} stock={sneakers.items[2].stock} />
+            <ItemCount initial={0} stock={2} />
           </div>
           <div>
             <div className="celwidget">

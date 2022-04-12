@@ -13,7 +13,7 @@ nav {
   border-bottom: 2px solid #dbdbdb;
   border-radius: 5px;
   box-shadow: 0 6px 16px hsl(200, 15, 95%);
- 
+  font-family: 'Poppins';
   width: 100%;
   z-index: 999;
   .nav__container {
@@ -51,12 +51,12 @@ nav {
   line-height: 1;
 
   position: relative;
-  font-family: merriweather, serif;
-  letter-spacing: -4px;
-  font-weight: 900;
-  font-style: italic;
-  color: rgb(114, 114, 114);
- text-shadow: 2px 2px 2px #000;
+  font-family: 'Lobster';
+  letter-spacing: -1.7px;
+  font-weight: lighter;
+  
+  color: rgb(123, 121, 121);
+  text-shadow: 1px 1px 2px #000;
   a {
     color: black;
     text-decoration: none;
@@ -80,7 +80,7 @@ nav {
   font-size: 1rem;
   font-weight: 900;
   padding: 12px 24px;
-  color: rgb(114, 114, 114);
+  color: rgb(114, 114, 114) !important;
   border: solid black 2px;
   background: rgb(255, 255, 255);
   transition-property: color, background;
@@ -90,16 +90,24 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   &:hover {
-    color: rgb(255, 255, 255);
-    transition: all .3s ease-in-out;
-    background: black;
+    color: rgb(255, 255, 255) !important;
+    transition: all 0.3s ease-in-out;
+    background: black !important;
+  }
+  .register-button {
+    &:hover {
+      color: rgb(255, 255, 255) !important;
+      transition: all 0.3s ease-in-out;
+      background: black !important;
+    }
   }
 }
 
+ 
 .traspaso .mobile-navigation {
   display: none;
 }
-.wrap .mobile-navigation{
+.wrap .mobile-navigation {
   display: none;
 }
 
@@ -116,30 +124,27 @@ nav {
 
   .traspaso .mobile-navigation .hamburger {
     position: absolute;
-     
+
     right: 0;
     font-size: 3.3rem;
     cursor: pointer;
-    
+
     color: rgb(77, 77, 77) !important;
-    
   }
 
   .traspaso .mobile-navigation .closest {
     position: absolute;
-     
+
     right: 0.529%;
     font-size: 3rem;
     cursor: pointer;
-     color: rgb(77, 77, 77) !important;
+    color: rgb(77, 77, 77) !important;
   }
 
   #logoMobile {
     display: none;
   }
 
-
- 
   .traspaso {
     opacity: 1;
 
@@ -151,7 +156,7 @@ nav {
         position: absolute;
 
         z-index: 9999 !important;
-        top: 80.5px ;
+        top: 80.5px;
         right: 0;
         height: 2.3%;
         width: 100%;
@@ -172,14 +177,15 @@ nav {
       a {
         font-style: italic;
         color: rgb(114, 114, 114);
-       text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 2px 2px #000;
       }
     }
   }
 }
 
-@media screen and (max-width: 673px) {
+ 
 
+@media screen and (max-width: 673px) {
   .wrap .navigation {
     display: none;
   }
@@ -192,30 +198,27 @@ nav {
 
   .wrap .mobile-navigation .hamburger {
     position: absolute;
-     
+
     right: 0;
     font-size: 3.3rem;
     cursor: pointer;
-     
+
     color: rgb(77, 77, 77) !important;
-    
   }
 
   .wrap .mobile-navigation .closest {
     position: absolute;
-     
+
     right: 0.529%;
     font-size: 3rem;
     cursor: pointer;
-     color: rgb(77, 77, 77) !important;
+    color: rgb(77, 77, 77) !important;
   }
 
   #logoMobile {
     display: none;
   }
 
-
- 
   .wrap {
     opacity: 1;
 
@@ -225,11 +228,11 @@ nav {
         display: flex;
         flex-direction: column;
         position: absolute;
-        
+
         z-index: 9999 !important;
-        top: 80.5px ;
+        top: 80.5px;
         right: 0;
-         
+
         width: 100%;
         background-color: #fff;
         border-bottom: 1.99px solid #dbdbdb;
@@ -245,12 +248,17 @@ nav {
     }
 
     .logo-text {
+      font-family: 'Lobster';
+      letter-spacing: -1.7px;
+      font-weight: lighter;
+      
+      
+      text-shadow: 1px 1px 2px #000;
       a {
-        font-style: italic;
-        color: rgb(114, 114, 114);
-       text-shadow: 2px 2px 2px #000;
+       
+        color: rgb(101, 100, 100);
+        text-shadow: 2px 1px 2px #000;
       }
     }
   }
-  
 }

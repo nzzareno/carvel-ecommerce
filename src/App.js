@@ -1,28 +1,21 @@
 import "./App.scss";
-import ItemListContainer from "./pages/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Navbar from "./components/Navbar/Navbar";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef } from "react";
-import "./LocomotiveScroll.css";
-import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
+import { Routes, Route } from "react-router-dom";
+import ItemList from "./components/ItemList/ItemList";
 
 function App() {
-  const containerRef = useRef(null);
-
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        multiplier: 1.5,
-      }}
-      containerRef={containerRef}
-    >
-      <section data-scroll-section ref={containerRef}>
-        <Navbar />
-        <ItemListContainer />
-        <ItemDetailContainer />
-      </section>
-    </LocomotiveScrollProvider>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemList />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </div>
   );
 }
 
