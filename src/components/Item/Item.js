@@ -13,7 +13,7 @@ const Item = ({ id, name, imageUrl, price }) => {
             <Link
               style={{ textDecoration: "none" }}
               className="btnx"
-              to={`/items/${id}`}
+              to={`/item/${id}`}
             >
               <Link
                 style={{ textDecoration: "none", color: "white" }}
