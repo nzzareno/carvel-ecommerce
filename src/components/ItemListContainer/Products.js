@@ -327,25 +327,6 @@ export const PRODUCTS = [
   },
 
   {
-    id: 26,
-    name: "Star Vixen Women's Cutout Cold Shoulder",
-    category: "Womens",
-    imageUrl: "https://m.media-amazon.com/images/I/617LQEMZK9L._AC_UY550_.jpg",
-    color: "Black",
-    stock: 11,
-    brand: "Star Vixen",
-    page: "https://www.starvixen.com/",
-    sizes: {
-      tiny: "S",
-      smallest: "M",
-      small: "L",
-      medium: "XL",
-      big: "XXL",
-      huge: "XXXL",
-    },
-  },
-
-  {
     id: 30,
     name: "Unionbay Cordova Belted Cargo Short",
     category: "Mens",
