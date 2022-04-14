@@ -1,6 +1,6 @@
-import React from 'react'
-import {ReactComponent as Cart} from '../../assets/shopping-bag.svg'
-import './CartWidget.scss'
+import React from "react";
+import { ReactComponent as Cart } from "../../assets/shopping-bag.svg";
+import "./CartWidget.scss";
 
 const CartWidget = () => {
   return (
@@ -8,7 +8,7 @@ const CartWidget = () => {
       <Cart className="shopping-icon" />
       <span className="item-count">0</span>
     </div>
-  )
-}
+  );
+};
 
-export default CartWidget
+export default CartWidget;

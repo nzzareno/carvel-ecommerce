@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemAside = ({ jackets }) => {
+  const [quantityCarro, setQuantityCarro] = useState(0);
+  const [branded] = useState(jackets.brand);
+
+  const onAdd = (cantidadCarro) => {
+    setQuantityCarro(cantidadCarro);
+  };
+  
   return (
     <div className="container-vertical">
       <aside style={{ width: "100%" }}>
@@ -26,12 +34,22 @@ const ItemAside = ({ jackets }) => {
               <span className="ubicacion"></span> Deliver to Argentina
             </small>
           </div>
+
           <div>
-            <h3 style={{ fontWeight: 500 }}>In stock.</h3>
+            {quantityCarro ? (
+              <Link to="/cart">
+                <button className="close zbutton">Buy now</button>
+              </Link>
+            ) : (
+              <ItemCount
+                stock={jackets.stock}
+                branded={branded}
+                initial={0}
+                onAdd={onAdd}
+              />
+            )}
           </div>
-          <div>
-            <ItemCount initial={0} stock={2} />
-          </div>
+
           <div>
             <div className="celwidget">
               <div className="a-section a-spacing-small a-text-left celwidget">

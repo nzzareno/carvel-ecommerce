@@ -3,14 +3,13 @@ import "./CollectionTitle.scss";
 import Typical from "react-typical";
 
 function CollectionTitle({ collection }) {
-  
   return (
     <div>
       {collection
         .filter((item, index) => index === 0)
         .map((item, index) => (
           <h3 key={index}>
-           {item.category} Collections: Comfortably feel of the 
+            {item.category} Collections: Comfortably feel of the 
             <Typical
               loop={Infinity}
               wrapper="b"

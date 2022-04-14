@@ -3,7 +3,7 @@
 // $imageIds: "1517021897933-0e0319cfbc28", "1533903345306-15d1c30952de",
 //   "1545243424-0ce743321e11", "1531306728370-e2ebd9d7bb99";
 $bp-md: 600px;
-$bp-lg: 800px;
+$bp-lg: 900px;
 
 @media screen and (max-width: 1400px) {
   .collection-item {
@@ -122,13 +122,7 @@ $bp-lg: 800px;
   margin: 0 0;
   font-family: var(--font-sans);
 
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: $bp-lg) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+ 
 }
 
 .cardx {
@@ -245,7 +239,7 @@ $bp-lg: 800px;
   }
 }
 
-@media (hover: hover) and (min-width: $bp-md) {
+@media (hover: hover) and (min-width: 600px) {
   .cardx:after {
     transform: translateY(0);
   }

@@ -12,7 +12,6 @@ const ItemList = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log(id);
     const promesa = new Promise((resolve, reject) => {
       setTimeout(() => {
         if (id) {

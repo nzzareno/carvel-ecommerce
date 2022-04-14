@@ -129,25 +129,17 @@
   -o-transition: opacity 0.3s ease-in-out;
 }
 
-.a-button-stack {
-  -webkit-text-size-adjust: 100%;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0f1111;
-  font-family: "Amazon Ember", Arial, sans-serif;
-  box-sizing: border-box;
-}
-
-.a-button {
-  -webkit-text-size-adjust: 100%;
+a-button {
   font-size: 14px;
   line-height: 20px;
   color: #0f1111;
   font-family: "Amazon Ember", Arial, sans-serif;
   box-sizing: border-box;
   margin-bottom: 8px !important;
+
   border-style: solid;
   border-width: 1px;
+
   cursor: pointer;
   padding: 0;
   text-align: center;
@@ -167,8 +159,7 @@
 
 .a-button-inner {
   -webkit-text-size-adjust: 100%;
-  font-size: 14px;
-  line-height: 20px;
+
   color: #0f1111;
   font-family: "Amazon Ember", Arial, sans-serif;
   cursor: pointer;
@@ -178,6 +169,7 @@
   position: relative;
   overflow: hidden;
   height: 29px;
+
   background: 0 0;
   box-shadow: none;
   border-radius: 19px;
@@ -209,7 +201,7 @@
   font-family: inherit;
   margin: 0;
   font-size: 100%;
-  vertical-align: middle;
+
   transition: all 0.1s linear;
   line-height: 19px;
   position: absolute;
@@ -290,17 +282,7 @@
   box-sizing: border-box;
 }
 
-.a-section {
-  -webkit-text-size-adjust: 100%;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0f1111;
-  font-family: "Amazon Ember", Arial, sans-serif;
-  box-sizing: border-box;
-  margin-bottom: 8px !important;
-  text-align: left !important;
-}
-
+ 
 .aok-align-center {
   line-height: 16.8px;
   margin-right: 8px;
@@ -333,7 +315,7 @@
 .gift-container {
   margin-top: 18px !important;
   border-bottom: 1px solid rgb(221, 221, 221);
-  width: 95%;
+  width: 80%;
   margin-right: 10px !important;
 }
 
@@ -371,15 +353,7 @@
   margin-top: 5px;
 }
 
-.a-declarative {
-  -webkit-text-size-adjust: 100%;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0f1111;
-
-  font-family: "Amazon Ember", Arial, sans-serif;
-  box-sizing: border-box;
-}
+ 
 
 .dataspan {
   position: relative;
@@ -566,7 +540,7 @@
   .item__detail .item__detail-single-pro-details {
     width: 100%;
     margin-left: -42px;
-    margin-right: 40px;
+    margin-right: 22px;
   }
 
   .item__detail .item__detail-single-pro-details h1 {
@@ -576,7 +550,7 @@
   }
 
   .item__detail .item__detail-single-pro-details h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .item__detail {
@@ -590,14 +564,14 @@
     background-color: #ffffff;
     object-fit: contain;
     height: 100%;
-    padding-right: 50px;
+    padding-right: 49px;
     padding-left: 49px;
   }
 
   .item__detail .item__detail-single-img {
-    width: 50%;
+    width: 21%;
     min-height: 100vh;
-    margin-left: -25px;
+    margin-left: -33px;
   }
 
   .container-vertical {
@@ -622,4 +596,47 @@
   .barra-captador {
     display: none;
   }
+}
+
+$colors: (
+  fill: #a972cb,
+  pulse: #ef6eae,
+  close: rgb(0, 151, 0),
+  raise: #ffa260,
+  up: #e4cb58,
+  slide: #8fc866,
+  offset: #19bc8b,
+);
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 25deg)};
+  }
+}
+
+.zbutton {
+  color: var(--color);
+  transition: 0.7s;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.close:hover,
+.close:focus {
+  box-shadow: inset -6em 0 0 0 var(--hover), inset 6em 0 0 0 var(--hover);
+}
+
+.zbutton {
+  background: rgb(0, 124, 25);
+  border: 0.5px solid rgb(0, 0, 0);
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 3em;
 }

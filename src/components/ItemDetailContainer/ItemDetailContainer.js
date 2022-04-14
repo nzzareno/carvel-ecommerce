@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log(id);
     const promesha = new Promise((resolve, reject) => {
       setTimeout(() => {
         if (id) {
@@ -23,9 +22,7 @@ const ItemDetailContainer = () => {
       }, 2000);
     });
     promesha.then((rta) => setJackets(rta)).catch((err) => console.log(err));
-  }, [id, jackets]);
-
-  console.log(jackets);
+  }, [id]);
 
   return (
     <>

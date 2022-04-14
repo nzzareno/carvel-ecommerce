@@ -1,16 +1,28 @@
- 
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}
 
 .ctrl {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-
+  justify-content: center;
   background-color: #ffffff;
   border-radius: 3px;
   font-size: 30px;
@@ -59,7 +71,7 @@
 }
 
 .offline-counter-input {
-  width: 100%;
+  width: 50%;
   margin: 0;
   padding: 0;
   position: relative;
@@ -93,31 +105,26 @@
   transition: opacity 100ms ease-in;
 }
 
-// safari, chrome, opera... arrow inputs
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-// firefox
-
 input[type="number"] {
   -moz-appearance: textfield;
 }
 
 .ctrl-button {
- 
- line-height: 10.2px;
- padding: 9px 5px;
- 
- width: 25px;
+  line-height: 10.2px;
+  padding: 9px 5px;
+
+  width: 35px;
   text-align: center;
   color: #000;
   cursor: pointer;
-  background: #FFD814;
-  border-color: #FCD200;
+  background: #ffd814;
+  border-color: #fcd200;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
 }
@@ -127,10 +134,11 @@ input[type="number"] {
   transition: background-color 100ms ease-in;
 }
 .ctrl-button:active {
-  background-color: #FFD814;
+  background-color: #ffd814;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
 }
+
 .ctrl-button-decrement {
   border-radius: 3px 0 0 3px;
 }
@@ -139,12 +147,14 @@ input[type="number"] {
 }
 
 .offline-ctrl {
-  width: 50px;
-  line-height: 50px;
+  line-height: 10.2px;
+  padding: 9px 5px;
+  width: 35px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.707);
-  cursor: not-allowed;
-  background-color: #8498a73d;
+  color: rgba(0, 0, 0, 0.365);
+  cursor: pointer;
+  background: #ffd81460;
+  border-color: #fcd200;
   -webkit-transition: background-color 100ms ease-in;
   transition: background-color 100ms ease-in;
 }
@@ -162,4 +172,110 @@ input[type="number"] {
   font-family: monospace;
   font-weight: 800;
   border-radius: 3px;
+}
+
+.stocked {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #b12704;
+  font-weight: 700 !important;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  
+  font-size: inherit;
+  font-family: 'Roboto';
+  &.learn-more {
+    width: 12rem;
+    height: auto;
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background-color: #ffd814;
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: $black;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: "";
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid rgb(0, 0, 0);
+            border-right: 0.125rem solid rgb(0, 0, 0);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: black;
+      font-weight: bolder;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: black;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: black;
+    }
+  }
+}
+
+@media screen and(max-width:909px) {
+  .stocked {
+    font-family: inherit;
+    font-size: 0.7rem;
+    color: #b12704;
+    font-weight: 700 !important;
+  }
+
+  button {
+    &learn-more {
+      width: 11rem;
+    }
+  }
 }

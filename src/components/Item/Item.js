@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Item = ({ id, name, imageUrl, price }) => {
   return (
     <>
-      <div className="page-content" onClick={() => console.log("asdasd")}>
+      <div className="page-content">
         <div className="cardx" style={{ backgroundImage: `url(${imageUrl})` }}>
           <div className="contentx">
             <h2 className="titlex">{name}</h2>
@@ -15,12 +15,12 @@ const Item = ({ id, name, imageUrl, price }) => {
               className="btnx"
               to={`/item/${id}`}
             >
-              <Link
+              <span
                 style={{ textDecoration: "none", color: "white" }}
                 to={`/item/${id}`}
               >
                 SHOP NOW
-              </Link>
+              </span>
             </Link>
           </div>
         </div>
