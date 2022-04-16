@@ -448,7 +448,7 @@ export const PRODUCTS = [
 
   {
     id: 45,
-    name: "Oakley Oo4079 Feedback",
+    name: "Oakley Feedback",
     category: "Glasses",
     imageUrl: "https://m.media-amazon.com/images/I/41YgeboTEvL._AC_SX679._SX._UX._SY._UY_.jpg",
     price: 130,
@@ -460,7 +460,7 @@ export const PRODUCTS = [
 
   {
     id: 46,
-    name: "Ray-Ban Rb4165 Justin",
+    name: "Ray-Ban Justin",
     category: "Glasses",
     imageUrl: "https://m.media-amazon.com/images/I/51QExLzUCBL._AC_UX679_.jpg",
     price: 50,
@@ -496,7 +496,7 @@ export const PRODUCTS = [
 
   {
     id: 49,
-    name: "ARNETTE An4202 Fastball ",
+    name: "ARNETTE Fastball ",
     category: "Glasses",
     imageUrl: "https://m.media-amazon.com/images/I/412rirxsY8L._AC_UX679_.jpg",
     price: 150,

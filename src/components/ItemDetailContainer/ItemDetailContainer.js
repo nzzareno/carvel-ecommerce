@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+ 
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { PRODUCTS } from "../ItemListContainer/Products";
 import Spinner from "../ItemListContainer/Spinner";
 
 const ItemDetailContainer = () => {
   const [jackets, setJackets] = useState([]);
-
   const { id } = useParams();
+ 
 
   useEffect(() => {
     const promesha = new Promise((resolve, reject) => {

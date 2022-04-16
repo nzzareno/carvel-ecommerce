@@ -62,7 +62,6 @@ $booFaceColor: #9b9b9b;
   }
 }
 
-
  
 
 .container {
@@ -84,7 +83,7 @@ $booFaceColor: #9b9b9b;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 28%);
   padding-top: $jaggedDistance * 2;
   padding-bottom: $jaggedDistance * 2;
 }

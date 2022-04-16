@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { CarritoContext } from "../../context/CartContext";
 
 const ItemAside = ({ jackets }) => {
   const [quantityCarro, setQuantityCarro] = useState(0);
   const [branded] = useState(jackets.brand);
 
+  let { addToCarrito } = useContext(CarritoContext);
+  let { setAddToCarrito } = useContext(CarritoContext);
+  let { addItem } = useContext(CarritoContext);
+ 
+
   const onAdd = (cantidadCarro) => {
     setQuantityCarro(cantidadCarro);
+    setAddToCarrito([
+      ...addToCarrito,
+      { item: jackets, quantity: cantidadCarro },
+    ]);
+    addItem(jackets, cantidadCarro);
   };
-  
+
   return (
     <div className="container-vertical">
       <aside style={{ width: "100%" }}>
@@ -30,16 +41,17 @@ const ItemAside = ({ jackets }) => {
           </div>
           <div>
             <small>
-              {" "}
               <span className="ubicacion"></span> Deliver to Argentina
             </small>
           </div>
 
           <div>
             {quantityCarro ? (
-              <Link to="/cart">
-                <button className="close zbutton">Buy now</button>
-              </Link>
+              <>
+                <Link to="/cart">
+                  <button className="close zbutton">Buy now</button>
+                </Link>
+              </>
             ) : (
               <ItemCount
                 stock={jackets.stock}

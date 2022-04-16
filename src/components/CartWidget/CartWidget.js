@@ -1,13 +1,19 @@
-import React from "react";
-import { ReactComponent as Cart } from "../../assets/shopping-bag.svg";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ReactComponent as Carrito } from "../../assets/shopping-bag.svg";
+import { CarritoContext } from "../../context/CartContext";
 import "./CartWidget.scss";
 
 const CartWidget = () => {
+  let { addToCarrito } = useContext(CarritoContext);
+
   return (
-    <div className="cart-icon">
-      <Cart className="shopping-icon" />
-      <span className="item-count">0</span>
-    </div>
+    <Link to={"/cart"}>
+      <div className="cart-icon">
+        <Carrito className="shopping-icon" />
+        <span className="item-count">{addToCarrito.length}</span>
+      </div>
+    </Link>
   );
 };
 
