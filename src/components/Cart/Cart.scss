@@ -197,6 +197,7 @@ a:hover {
   font-size: 22px;
   font-weight: 900;
   line-height: 49px;
+  width: 100px;
   margin: 0;
   padding: 0 30px;
   font-family: "roboto";
@@ -211,6 +212,31 @@ a:hover {
     &:hover {
       color: #f6ff00;
       background: #222;
+    }
+  }
+}
+
+.product footer .price {
+  background: #005008;
+  color: rgb(255, 255, 255);
+  float: right;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 49px;
+  margin: 0;
+  padding: 0 30px;
+  font-family: "roboto";
+  cursor: pointer;
+  -webkit-transition: margin 0.15s linear;
+  -moz-transition: margin 0.15s linear;
+  -ms-transition: margin 0.15s linear;
+  -o-transition: margin 0.15s linear;
+  transition: margin 0.15s linear;
+  transition: all 0.2s linear;
+  &:hover {
+    &:hover {
+      color: #ffffff;
+      background: #00640a;
     }
   }
 }
@@ -340,6 +366,31 @@ a:hover {
     -ms-transition: margin 0.2s linear, opacity 0.2s linear;
     -o-transition: margin 0.2s linear, opacity 0.2s linear;
     transition: margin 0.2s linear, opacity 0.2s linear;
+  }
+
+  .product footer .price {
+    background: #005008;
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 49px;
+    margin: 0;
+    padding: 0 10px;
+    font-family: "roboto";
+    cursor: pointer;
+    -webkit-transition: margin 0.15s linear;
+    -moz-transition: margin 0.15s linear;
+    -ms-transition: margin 0.15s linear;
+    -o-transition: margin 0.15s linear;
+    transition: margin 0.15s linear;
+    transition: all 0.2s linear;
+    &:hover {
+      &:hover {
+        color: #ffffff;
+        background: #00640a;
+      }
+    }
   }
 }
 

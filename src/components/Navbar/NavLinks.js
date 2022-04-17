@@ -1,8 +1,8 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link, NavLink } from "react-router-dom";
-
 import "./Navbar.scss";
+import { ReactComponent as User } from "../../assets/prouser.svg";
 
 const NavLinks = (props) => {
   return (
@@ -50,9 +50,14 @@ const NavLinks = (props) => {
             </NavLink>
           </li>
 
-          <Link className="nav--button" to="/signup">
-            Connect
-          </Link>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to={"/signup"}
+            >
+              <User style={{color: 'red'}} className="user-logo" />
+            </NavLink>
+          </li>
           <CartWidget />
         </ul>
       </div>

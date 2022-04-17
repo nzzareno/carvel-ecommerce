@@ -5,15 +5,18 @@ import "./Cart.scss";
 import { BsTrash } from "react-icons/bs";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 
 const Cart = () => {
   let { addToCarrito } = useContext(CarritoContext);
   let { clear } = useContext(CarritoContext);
   let { removeItem } = useContext(CarritoContext);
+
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
+
   const totalPrice = addToCarrito
     .map((product) => {
       return product.item.price * product.quantity;
@@ -29,7 +32,7 @@ const Cart = () => {
               initial="hidden"
               animate="visible"
               variants={variants}
-              key={producto.item.id}
+              key={uuidv4()}
             >
               <motion.div
                 initial="hidden"
@@ -71,14 +74,17 @@ const Cart = () => {
                         />
                       </h1>
                       {producto.item.category} | {producto.item.color}
+                    
                     </div>
 
                     <footer className="content">
                       <span className="qt">
                         <strong>Qty:</strong> {producto.quantity}
                       </span>
-
-                      <h2 className="full-price">${producto.item.price}</h2>
+                      <h2 className="full-price">
+                        ${producto.item.price * producto.quantity}
+                      </h2>
+                      <h2 className="price">${producto.item.price}</h2>
                     </footer>
                   </motion.article>
                 </motion.section>

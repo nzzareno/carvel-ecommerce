@@ -13,7 +13,7 @@ nav {
   border-bottom: 2px solid #dbdbdb;
   border-radius: 5px;
   box-shadow: 0 6px 16px hsl(200, 15, 95%);
-  font-family: 'Roboto', sans-serif;   
+  font-family: "Roboto", sans-serif;
   width: 100%;
   font-weight: lighter;
   z-index: 999;
@@ -52,12 +52,12 @@ nav {
   line-height: 1;
 
   position: relative;
-  font-family: 'Lobster';
+  font-family: "Lobster";
   letter-spacing: -1.7px;
   font-weight: lighter;
-  
+
   color: rgb(101, 100, 100);
-        text-shadow: 2px 1px 2px #000;
+  text-shadow: 2px 1px 2px #000;
   a {
     color: black;
     text-decoration: none;
@@ -78,23 +78,22 @@ nav {
 .nav--button {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 500;
-  font-family: 'Roboto', sans-serif;
-  padding: 12px 24px;
-  color: rgb(114, 114, 114) !important;
-  border: solid black 2px;
+  font-size:1.9rem;
+  margin-top: 2px;
+  font-family: "Roboto", sans-serif;
+
+  color: rgb(55, 55, 55) !important;
+
   background: rgb(255, 255, 255);
   transition-property: color, background;
-  transition-duration: 0.15s;
-  letter-spacing: 0.1rem;
+  transition-duration: 0.11s;
+
   transition-timing-function: ease-out;
-  border-radius: 10px;
+
   cursor: pointer;
   &:hover {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(128, 127, 127) !important;
     transition: all 0.3s ease-in-out;
-    background: black !important;
   }
   .register-button {
     &:hover {
@@ -105,7 +104,23 @@ nav {
   }
 }
 
- 
+.user-logo {
+  width: 30px;
+  color: blue;
+  height: 35px;
+  font-size: 1rem;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.user-container {
+  padding-top: 6x;
+  font-size: 1rem;
+}
+
+
 .traspaso .mobile-navigation {
   display: none;
 }
@@ -185,8 +200,6 @@ nav {
   }
 }
 
- 
-
 @media screen and (max-width: 900px) {
   .wrap .navigation {
     display: none;
@@ -250,14 +263,12 @@ nav {
     }
 
     .logo-text {
-      font-family: 'Lobster';
+      font-family: "Lobster";
       letter-spacing: -1.7px;
       font-weight: lighter;
-      
-      
+
       text-shadow: 1px 1px 2px #000;
       a {
-       
         color: rgb(101, 100, 100);
         text-shadow: 2px 1px 2px #000;
       }
