@@ -9,7 +9,8 @@ function CollectionTitle({ collection }) {
         .filter((item, index) => index === 0)
         .map((item, index) => (
           <h3 key={index}>
-            {item.category} Collections: Comfortably feel of the 
+            {item.chosen ? "Carvel" : item.category} Collections: Comfortably
+            feel of the 
             <Typical
               loop={Infinity}
               wrapper="b"

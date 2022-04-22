@@ -197,9 +197,9 @@ a:hover {
   font-size: 22px;
   font-weight: 900;
   line-height: 49px;
-  width: 100px;
+  width: 70px;
   margin: 0;
-  padding: 0 30px;
+  padding: 0 10px;
   font-family: "roboto";
   cursor: pointer;
   -webkit-transition: margin 0.15s linear;
@@ -224,7 +224,8 @@ a:hover {
   font-weight: 900;
   line-height: 49px;
   margin: 0;
-  padding: 0 30px;
+  width: 70px;
+  padding: 0 10px;
   font-family: "roboto";
   cursor: pointer;
   -webkit-transition: margin 0.15s linear;
@@ -298,6 +299,7 @@ a:hover {
 
 .right {
   float: right;
+  margin: 42px auto;
 }
 
 .btn {
@@ -368,6 +370,12 @@ a:hover {
     transition: margin 0.2s linear, opacity 0.2s linear;
   }
 
+  .right {
+   
+    margin: 42px auto;
+    margin-right: 101px;
+  }
+
   .product footer .price {
     background: #005008;
     color: rgb(255, 255, 255);
@@ -376,7 +384,8 @@ a:hover {
     font-weight: 900;
     line-height: 49px;
     margin: 0;
-    padding: 0 10px;
+    width: 70px !important;
+    padding: 0 10px ;
     font-family: "roboto";
     cursor: pointer;
     -webkit-transition: margin 0.15s linear;
@@ -404,3 +413,59 @@ a:hover {
     color: rgb(0, 213, 255);
   }
 }
+
+  .initial-price {
+  color: #00640a;
+  margin-right: -5px;
+}
+
+.final-price {
+  color: #000000;
+  margin-right: -5px;
+}
+
+ .iconpower {
+   width: 50px;
+    
+  margin: 7px 0 0 4px;
+ }
+
+ .button-backhome {
+  -webkit-text-size-adjust: 100%;
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color-darker-10: #006ba1;
+  --wp-admin-theme-color-darker-20: #005a87;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: inherit;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-family: inherit;
+  padding: 1.05em 1.74em .9em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transition: background-color .25s ease-out,color .25s ease-out;
+  font-size: .6875rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #191919;
+  color: #fff;
+  height: 34px!important;
+  line-height: 34px!important;
+  min-width: 105px;
+  width: auto;
+  letter-spacing: 1.8px!important;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-top: 0;
+  padding-bottom: 0;
+  outline: 0;
+
+  &:hover {
+    background-color: #353535;
+    color: #fff;
+  }
+ }
+ 

@@ -55,7 +55,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/71-ar+n69gS._AC_UX569_.jpg",
     stock: 5,
     price: 18,
-    chosen: true,
+   
     color: "White",
     brand: "US Polo",
     page: "https://www.uspoloshoes.com/mens-Hats",
@@ -68,6 +68,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/71vz-XjGeeL._AC_UX679_.jpg",
     stock: 5,
     price: 14,
+    chosen: true,
     color: "White",
     brand: "BOSS",
     page: "https://www.boss.com/us/mens-Hats",
@@ -80,7 +81,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/81DuVoPM45L._AC_UX679_.jpg",
     stock: 5,
     price: 18,
-    chosen: true,
+    
     color: "White",
     brand: "Lacoste",
     page: "https://www.lacoste.com/us/mens-Hats",
@@ -146,11 +147,12 @@ export const PRODUCTS = [
     id: 12,
     name: "Legendary Whitetails Archer Shirt Thermal",
     category: "Jackets",
-    chosen: true,
+   
     imageUrl: "https://m.media-amazon.com/images/I/81fnu5tSOsL._AC_UX569_.jpg",
     price: 90,
     stock: 11,
     color: "Sky",
+    chosen: true,
     brand: "Legendary Whitetails",
     page: "https://www.legendarywhitetails.com/",
     sizes: {
@@ -171,7 +173,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/91Kn1uQWhZL._AC_UX522_.jpg",
     price: 165,
     color: "Burnt Orange",
-    chosen: true,
+   
     brand: "Legendary Whitetails",
     page: "https://www.legendarywhitetails.com/",
     sizes: {
@@ -271,7 +273,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/61Nrz20I2AL._AC_UY550_.jpg",
     price: 120,
     stock: 6,
-    chosen: true,
+   
     color: "0 White",
     brand: "Dokotoo",
     page: "https://www.dokotoo.com/",
@@ -292,7 +294,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/81GlQi0r86S._AC_UY550_.jpg",
     price: 55,
     stock: 11,
-    chosen: true,
+    
     color: "Black",
     brand: "Star Vixen",
     page: "https://www.starvixen.com/",
@@ -313,6 +315,7 @@ export const PRODUCTS = [
     imageUrl: "https://m.media-amazon.com/images/I/91Aw1l3JkFL._AC_UY550_.jpg",
     price: 135,
     stock: 12,
+    chosen: true,
     color: "Holly Berry",
     brand: "Legendary Whitetails",
     page: "https://www.legendarywhitetails.com/",
@@ -375,6 +378,7 @@ export const PRODUCTS = [
     color: "Black",
     stock: 12,
     brand: "Nike",
+    chosen: true,
     page: "https://www.nike.com/",
     sizes: {
       tiny: "S",
@@ -498,6 +502,7 @@ export const PRODUCTS = [
     id: 49,
     name: "ARNETTE Fastball ",
     category: "Glasses",
+    chosen: true,
     imageUrl: "https://m.media-amazon.com/images/I/412rirxsY8L._AC_UX679_.jpg",
     price: 150,
     stock: 6,
@@ -510,6 +515,7 @@ export const PRODUCTS = [
     id: 50,
     name: "Maui Jim Koki Playa",
     category: "Glasses",
+    chosen: true,
     imageUrl: "https://m.media-amazon.com/images/I/513L66iANhL._AC_UX679_.jpg",
     price: 110,
     stock: 6,

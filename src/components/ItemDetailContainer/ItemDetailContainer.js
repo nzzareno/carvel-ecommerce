@@ -10,6 +10,20 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
  
 
+  
+  // useEffect(() => {
+  //   const db = getFirestore();
+
+  //   const hats = doc(db, "Products", "YPQGY4euFdaUcCoDm06C");
+
+  //   getDoc(hats).then((rta) => {
+  //     console.log(rta.data());
+  //     console.log(rta.id);
+
+  //     setProducto({ ...rta.data(), id: rta.id });
+  //   });
+  // }, []);
+
   useEffect(() => {
     const promesha = new Promise((resolve, reject) => {
       setTimeout(() => {

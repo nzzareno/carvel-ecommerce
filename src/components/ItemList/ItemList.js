@@ -5,7 +5,7 @@ import CollectionTitle from "../CollectionTitle/CollectionTitle";
 import "./ItemList.scss";
 import { useParams } from "react-router-dom";
 import Spinner from "../ItemListContainer/Spinner";
-
+// import yellowpast from "../../assets/yellowpast.jpg";
 const ItemList = () => {
   const [collection, setCollection] = useState([]);
 
@@ -17,7 +17,7 @@ const ItemList = () => {
         if (id) {
           resolve(PRODUCTS.filter((product) => product.category === id));
         } else {
-          resolve(PRODUCTS.filter((product) => product.category === "Glasses"));
+          resolve(PRODUCTS.filter((product) => product.chosen));
         }
       }, 2000);
     });
@@ -30,6 +30,11 @@ const ItemList = () => {
 
   return (
     <>
+      {/* <div className="container-image">
+      <img src={yellowpast} alt="" />
+      </div> */}
+
+      <div style={{ background: "green", width: "100%" }}></div>
       <h1 className="title-collection">
         <CollectionTitle collection={collection} />
       </h1>

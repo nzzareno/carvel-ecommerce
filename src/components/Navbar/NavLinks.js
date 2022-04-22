@@ -14,6 +14,14 @@ const NavLinks = (props) => {
       </div>
       <div className="nav_menu">
         <ul>
+        <li onClick={() => props.isMobile && props.closeMobileMenu()}>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to={"/category/Glasses"}
+            >
+              GLASSES
+            </NavLink>
+          </li>
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}

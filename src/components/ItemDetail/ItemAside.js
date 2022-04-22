@@ -49,7 +49,7 @@ const ItemAside = ({ jackets }) => {
             {quantityCarro ? (
               <>
                 <Link to="/cart">
-                  <button className="close zbutton">Buy now</button>
+                  <button className="close zbutton">Finish my purchase</button>
                 </Link>
               </>
             ) : (
