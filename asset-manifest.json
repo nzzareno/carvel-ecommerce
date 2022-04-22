@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/carvel-ecommerce/static/css/main.31f3ab8d.css",
-    "main.js": "/carvel-ecommerce/static/js/main.f83d7c15.js",
+    "main.css": "/carvel-ecommerce/static/css/main.87e796d5.css",
+    "main.js": "/carvel-ecommerce/static/js/main.5ba23b11.js",
     "static/media/FontsFree-Net-Billabong.ttf": "/carvel-ecommerce/static/media/FontsFree-Net-Billabong.0e94b13a1cfb505ff271.ttf",
+    "static/media/men-suit-svgrepo-com.svg": "/carvel-ecommerce/static/media/men-suit-svgrepo-com.722731dc3033c3ff8e199e14ea036112.svg",
+    "static/media/jacket-svgrepo-com.svg": "/carvel-ecommerce/static/media/jacket-svgrepo-com.d54972fc190c6c02e31aeb50d0f3898e.svg",
+    "static/media/women-coat-svgrepo-com.svg": "/carvel-ecommerce/static/media/women-coat-svgrepo-com.fb227039053d43a447c117f03d15a4de.svg",
     "static/media/shopping-bag.svg": "/carvel-ecommerce/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
+    "static/media/glasses-svgrepo-com.svg": "/carvel-ecommerce/static/media/glasses-svgrepo-com.6289f0308e6b682b1ab4b16361adf369.svg",
     "index.html": "/carvel-ecommerce/index.html",
+    "static/media/accesory-hats-svgrepo-com.svg": "/carvel-ecommerce/static/media/accesory-hats-svgrepo-com.d81c88771e3a3da7f17c083ddece0e34.svg",
     "static/media/prouser.svg": "/carvel-ecommerce/static/media/prouser.af0575de035b93fcf23e82c71cfd49d1.svg",
-    "main.31f3ab8d.css.map": "/carvel-ecommerce/static/css/main.31f3ab8d.css.map",
-    "main.f83d7c15.js.map": "/carvel-ecommerce/static/js/main.f83d7c15.js.map"
+    "main.87e796d5.css.map": "/carvel-ecommerce/static/css/main.87e796d5.css.map",
+    "main.5ba23b11.js.map": "/carvel-ecommerce/static/js/main.5ba23b11.js.map"
   },
   "entrypoints": [
-    "static/css/main.31f3ab8d.css",
-    "static/js/main.f83d7c15.js"
+    "static/css/main.87e796d5.css",
+    "static/js/main.5ba23b11.js"
   ]
 }
