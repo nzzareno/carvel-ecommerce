@@ -7,8 +7,7 @@ import ItemList from "./components/ItemList/ItemList";
 import NotFound404 from "./components/NotFound404/NotFound404";
 import Cart from "./components/Cart/Cart";
 import CartContext from "./context/CartContext";
-import FBGetProduct from "./components/ItemDetailContainer/FBGetProduct";
-import FBGetCollection from "./components/ItemDetailContainer/FBGetCollection";
+
 
 function App() {
   return (
@@ -18,8 +17,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/testproduct" element={<FBGetProduct />}/>
-            <Route path="/testcollection" element={<FBGetCollection />}/>
             <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
             <Route path="/category/:id" element={<ItemList />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />

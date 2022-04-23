@@ -14,14 +14,9 @@ const ItemDetailContainer = () => {
     const singleItem = doc(db, "Products", id);
 
     getDoc(singleItem).then((rta) => {
-      console.log(rta.data());
-      console.log(rta.id);
-
       setProducto({ ...rta.data(), id: rta.id });
     });
   }, [id]);
-
-  console.log(producto);
 
   return (
     <>
