@@ -4,7 +4,7 @@ import ItemAside from "./ItemAside";
 import "./ItemDetail.scss";
 import StarRating from "./StarRating";
 
-const ItemDetail = ({ jackets }) => {
+const ItemDetail = ({ producto }) => {
   return (
     <section className="item__detail">
       <div className="item__detail-single-img">
@@ -22,22 +22,22 @@ const ItemDetail = ({ jackets }) => {
           <Link
             style={{ textDecoration: "none" }}
             className="subcaptador"
-            to={`/category/${jackets.category}`}
+            to={`/category/${producto.category}`}
           >
-            {jackets.category}
+            {producto.category}
           </Link>
         </small>
-        <img src={jackets.imageUrl} alt="" />
+        <img src={producto.imageUrl} alt="" />
       </div>
       <div className="item__detail-single-pro-details">
         <h5>
           Brand:{" "}
-          <a style={{ textDecoration: "none" }} href={jackets.page}>
-            {jackets.brand}
+          <a style={{ textDecoration: "none" }} href={producto.page}>
+            {producto.brand}
           </a>
         </h5>
         <div className="title-container">
-          <h2>{jackets.name} </h2>
+          <h2>{producto.name} </h2>
           <div className="star-container">
             <StarRating />
             <span className="a-choice">
@@ -52,16 +52,16 @@ const ItemDetail = ({ jackets }) => {
 
         <div className="precio-container">
           <small className="small-price">Price: </small>
-          <h1>${jackets.price}</h1>
+          <h1>${producto.price}</h1>
         </div>
 
         <div className="color-container">
           <small className="small-color" style={{ marginRight: "5px" }}>
-            Color: {jackets.color}
+            Color: {producto.color}
           </small>
         </div>
       </div>
-      <ItemAside jackets={jackets} />
+      <ItemAside producto={producto} />
     </section>
   );
 };

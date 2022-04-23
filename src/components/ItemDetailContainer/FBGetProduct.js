@@ -22,7 +22,7 @@ const FBGetProduct = () => {
     <div>
       {producto.id ? (
         <>
-          <h1>{producto.name}</h1> <img src={producto.imageUrl} alt="33" />{" "}
+          <h1>{producto.name}</h1> <img src={producto.data().imageUrl} alt="33" />{" "}
         </>
       ) : (
         <h1>Cargando...</h1>

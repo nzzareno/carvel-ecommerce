@@ -2,13 +2,13 @@ import React from "react";
 import "./CollectionTitle.scss";
 import Typical from "react-typical";
 
-function CollectionTitle({ collection }) {
+function CollectionTitle({ productos }) {
   return (
-    <div>
-      {collection
+    <div >
+      {productos
         .filter((item, index) => index === 0)
         .map((item, index) => (
-          <h3 key={index}>
+          <h3 className="collection-title" key={index}>
             {item.chosen ? "Carvel" : item.category} Collections: Comfortably
             feel of the 
             <Typical

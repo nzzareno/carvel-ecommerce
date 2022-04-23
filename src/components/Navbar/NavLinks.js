@@ -17,6 +17,14 @@ const NavLinks = (props) => {
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to={"/category/Accessories"}
+            >
+             ACCESSORIES
+            </NavLink>
+          </li>
+        <li onClick={() => props.isMobile && props.closeMobileMenu()}>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
               to={"/category/Glasses"}
             >
               GLASSES
@@ -40,14 +48,7 @@ const NavLinks = (props) => {
             </NavLink>
           </li>
 
-          <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/category/Mens"}
-            >
-              MENS
-            </NavLink>
-          </li>
+        
 
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink

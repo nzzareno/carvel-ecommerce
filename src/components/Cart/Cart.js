@@ -26,13 +26,13 @@ const Cart = () => {
     .map((product) => {
       return product.item.price * product.quantity;
     })
-    .reduce((a, b) => a + b, 0);
-  console.log(addToCarrito);
+    .reduce((item, qty) => item + qty, 0);
+
   const pickData = addToCarrito.map((producto) => {
     return (
       <p key={uuidv4()}>
         <small>
-          {producto.item.name}({producto.quantity}) :{" "}
+          {producto.item.name}({producto.quantity}) :
           <strong> ${producto.item.price * producto.quantity}</strong>
         </small>
       </p>
@@ -157,10 +157,7 @@ const Cart = () => {
           >
             The cart is empty... Start enjoying our products and visit us again
           </h1>
-          <Link
-            to={`/`}
-            className="button-backhome"
-          >
+          <Link to={`/`} className="button-backhome">
             GO BACK TO HOME
           </Link>
           <div

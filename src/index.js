@@ -4,17 +4,20 @@ import "./index.scss";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBA5Rq1LrWTlWshf8roMksMIdroDgcqvkU",
-  authDomain: "carvel-ecommerce-coder.firebaseapp.com",
-  projectId: "carvel-ecommerce-coder",
-  storageBucket: "carvel-ecommerce-coder.appspot.com",
-  messagingSenderId: "194983770207",
-  appId: "1:194983770207:web:404e2c4742cc88a46343ea",
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID,
 };
 
 const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
 
 ReactDOM.render(
   <React.StrictMode>

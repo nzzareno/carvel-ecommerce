@@ -3,30 +3,29 @@ import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { CarritoContext } from "../../context/CartContext";
 
-const ItemAside = ({ jackets }) => {
+const ItemAside = ({ producto }) => {
   const [quantityCarro, setQuantityCarro] = useState(0);
-  const [branded] = useState(jackets.brand);
+  const [branded] = useState(producto.brand);
 
   let { addToCarrito } = useContext(CarritoContext);
   let { setAddToCarrito } = useContext(CarritoContext);
   let { addItem } = useContext(CarritoContext);
- 
 
   const onAdd = (cantidadCarro) => {
     setQuantityCarro(cantidadCarro);
     setAddToCarrito([
       ...addToCarrito,
-      { item: jackets, quantity: cantidadCarro },
+      { item: producto, quantity: cantidadCarro },
     ]);
-    addItem(jackets, cantidadCarro);
+    addItem(producto, cantidadCarro);
   };
-
+  console.log(producto)
   return (
     <div className="container-vertical">
       <aside style={{ width: "100%" }}>
         <div className="container-cuadrado">
           <div>
-            <h3>${jackets.price}</h3>
+            <h3>${producto.price}</h3>
           </div>
           <div>
             <p>and FREE Returns</p>
@@ -54,7 +53,7 @@ const ItemAside = ({ jackets }) => {
               </>
             ) : (
               <ItemCount
-                stock={jackets.stock}
+                stock={producto.stock}
                 branded={branded}
                 initial={0}
                 onAdd={onAdd}

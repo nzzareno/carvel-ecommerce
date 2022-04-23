@@ -1,55 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
- 
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { PRODUCTS } from "../ItemListContainer/Products";
 import Spinner from "../ItemListContainer/Spinner";
+import { db } from "../../index";
+import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [jackets, setJackets] = useState([]);
+  const [producto, setProducto] = useState([]);
   const { id } = useParams();
- 
-
-  
-  // useEffect(() => {
-  //   const db = getFirestore();
-
-  //   const hats = doc(db, "Products", "YPQGY4euFdaUcCoDm06C");
-
-  //   getDoc(hats).then((rta) => {
-  //     console.log(rta.data());
-  //     console.log(rta.id);
-
-  //     setProducto({ ...rta.data(), id: rta.id });
-  //   });
-  // }, []);
 
   useEffect(() => {
-    const promesha = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (id) {
-          resolve(PRODUCTS.filter((product) => product.id === Number(id)));
-        } else {
-          reject(
-            "Hubo un problema con la carga de nuestros elementos, por favor intentalo mas tarde..."
-          );
-        }
-      }, 2000);
+    const singleItem = doc(db, "Products", id);
+
+    getDoc(singleItem).then((rta) => {
+      console.log(rta.data());
+      console.log(rta.id);
+
+      setProducto({ ...rta.data(), id: rta.id });
     });
-    promesha.then((rta) => setJackets(rta)).catch((err) => console.log(err));
   }, [id]);
+
+  console.log(producto);
 
   return (
     <>
-      {jackets.length === 0 ? (
-        <div>
-          <Spinner />
-        </div>
-      ) : (
-        jackets.map((jacket) => {
-          return <ItemDetail key={jacket.id} jackets={jacket} />;
-        })
-      )}
+      <div>
+        {producto.id ? (
+          <>
+            <ItemDetail producto={producto} />
+          </>
+        ) : (
+          <div>
+            <Spinner />
+          </div>
+        )}
+      </div>
     </>
   );
 };
