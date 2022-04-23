@@ -13,7 +13,7 @@
 .title-collection {
   text-shadow: 1px 1px 1px black;
   position: absolute;
-  top: -0.5%;
+  top: 4.1%;
   font-size: 12rem !important;
   left: 1%;
   color: rgb(255, 255, 255);
@@ -189,26 +189,25 @@
 }
 
 @media screen and (max-width: 1400px) {
-  
-#rotate-words {
-  max-width: 400px;
-  margin: auto;
-  padding: 9% 0 53% 0;
-  font-size: 3.4em;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: white;
-  font-family: "Oswald", sans-serif;
-}
+  #rotate-words {
+    max-width: 400px;
+    margin: auto;
+    padding: 9% 0 53% 0;
+    font-size: 3.4em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    font-family: "Oswald", sans-serif;
+  }
 
-#rotate-words p {
-  display: block;
-  height: 300px;
-  text-align: center;
-  font-size: 1em;
-  text-transform: lowercase;
-  opacity: 0.8;
-  font-family: "Rubik", sans-serif;
-}
+  #rotate-words p {
+    display: block;
+    height: 300px;
+    text-align: center;
+    font-size: 1em;
+    text-transform: lowercase;
+    opacity: 0.8;
+    font-family: "Rubik", sans-serif;
+  }
 }
