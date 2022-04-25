@@ -12,6 +12,7 @@ import JacketImage from "../../assets/JacketImage.jpg";
 import WomenImage from "../../assets/WomenImage.jpg";
 import AccessoriesImage from "../../assets/HatImage.jpg";
 import GlassesFinalPicture from "../../assets/GlassesUltimate.jpg";
+ 
 
 const ItemList = () => {
   const [productos, setProductos] = useState([]);
@@ -54,6 +55,7 @@ const ItemList = () => {
     <>
       {productos.length > 0 && (
         <div className="container-image">
+        
           <h1 className="title-collection">
             <CollectionTitle productos={productos} />
           </h1>
@@ -62,6 +64,7 @@ const ItemList = () => {
             src={imagePoster()}
             alt="99"
           />
+          
           {!id && (
             <div style={{background: 'black'}} id="rotate-words">
               <div>

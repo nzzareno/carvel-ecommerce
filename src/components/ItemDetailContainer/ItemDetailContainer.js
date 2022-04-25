@@ -6,7 +6,7 @@ import { db } from "../../index";
 import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-  const [jackets, setJackets] = useState([]);
+ 
   const [producto, setProducto] = useState([]);
   const { id } = useParams();
 
