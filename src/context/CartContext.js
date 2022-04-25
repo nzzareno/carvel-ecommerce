@@ -10,13 +10,10 @@ export default function CartContext({ children }) {
       (product) => product.item.id === item.id
     );
 
- 
-
     if (foundProdIndex === -1) {
       setAddToCarrito([...addToCarrito, { item, quantity }]);
-    } 
+    }
 
- 
     if (quantity === 0) {
       setAddToCarrito([...addToCarrito]);
     }
