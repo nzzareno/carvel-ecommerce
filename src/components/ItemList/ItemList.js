@@ -6,19 +6,71 @@ import { useParams } from "react-router-dom";
 import Spinner from "../ItemListContainer/Spinner";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../index";
-import yellowpast from "../../assets/yellowpast.jpg";
-import HatImage from "../../assets/HatPicture.jpg";
-import JacketImage from "../../assets/JacketImage.jpg";
-import WomenImage from "../../assets/WomenImage.jpg";
-import AccessoriesImage from "../../assets/HatImage.jpg";
-import GlassesFinalPicture from "../../assets/GlassesUltimate.jpg";
- 
+import { motion } from "framer-motion";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 const ItemList = () => {
   const [productos, setProductos] = useState([]);
+  const [glassesImage, setGlassesImage] = useState("");
+  const [accessoriesImage, setAccessoriesImage] = useState("");
+  const [hatsImage, setHatsImage] = useState("");
+  const [jacketsImage, setJacketsImage] = useState("");
+  const [womensImage, setWomensImage] = useState("");
+  const [yellowpast, setYellowpast] = useState("");
   const { id } = useParams();
 
+  const storage = getStorage();
+  const httpsReferenceGlasses = ref(
+    storage,
+    "https://firebasestorage.googleapis.com/v0/b/carvel-ecommerce-coder.appspot.com/o/GlassesUltimate.jpg"
+  );
+  const httpsReferenceAccessories = ref(
+    storage,
+    "https://firebasestorage.googleapis.com/v0/b/carvel-ecommerce-coder.appspot.com/o/HatImage.jpg"
+  );
+  const httpsReferenceHats = ref(
+    storage,
+    "https://firebasestorage.googleapis.com/v0/b/carvel-ecommerce-coder.appspot.com/o/HatPicture.jpg"
+  );
+  const httpsReferenceJackets = ref(
+    storage,
+    "https://firebasestorage.googleapis.com/v0/b/carvel-ecommerce-coder.appspot.com/o/JacketImage.jpg"
+  );
+  const httpsReferenceWomens = ref(
+    storage,
+    "https://firebasestorage.googleapis.com/v0/b/carvel-ecommerce-coder.appspot.com/o/WomenImage.jpg"
+  );
+
+  const httpsReferenceYellowPast = ref(
+    storage,
+    "https://firebasestorage.googleapis.com/v0/b/carvel-ecommerce-coder.appspot.com/o/yellowpast.jpg"
+  );
+
   useEffect(() => {
+    getDownloadURL(httpsReferenceGlasses).then((url) => {
+      setGlassesImage(url);
+    });
+
+    getDownloadURL(httpsReferenceAccessories).then((url) => {
+      setAccessoriesImage(url);
+    });
+
+    getDownloadURL(httpsReferenceHats).then((url) => {
+      setHatsImage(url);
+    });
+
+    getDownloadURL(httpsReferenceJackets).then((url) => {
+      setJacketsImage(url);
+    });
+
+    getDownloadURL(httpsReferenceWomens).then((url) => {
+      setWomensImage(url);
+    });
+
+    getDownloadURL(httpsReferenceYellowPast).then((url) => {
+      setYellowpast(url);
+    });
+
     let productosRef;
     if (!id) {
       productosRef = query(
@@ -38,35 +90,49 @@ const ItemList = () => {
 
   function imagePoster() {
     if (id === "Hats") {
-      return HatImage;
+      return hatsImage;
     } else if (id === "Jackets") {
-      return JacketImage;
+      return jacketsImage;
     } else if (id === "Womens") {
-      return WomenImage;
+      return womensImage;
     } else if (id === "Glasses") {
-      return GlassesFinalPicture;
+      return glassesImage;
     } else if (id === "Accessories") {
-      return AccessoriesImage;
+      return accessoriesImage;
     }
     return yellowpast;
   }
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <>
       {productos.length > 0 && (
-        <div className="container-image">
-        
+        <motion.div
+          className="container-image"
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 7 }}
+        >
           <h1 className="title-collection">
             <CollectionTitle productos={productos} />
           </h1>
-          <img
+          <motion.img
             className={id ? "poster-image" : "yellowpast"}
             src={imagePoster()}
             alt="99"
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            transition={{ duration: 7 }}
           />
-          
+
           {!id && (
-            <div style={{background: 'black'}} id="rotate-words">
+            <div style={{ background: "black" }} id="rotate-words">
               <div>
                 NEW ARRIVALS
                 <p>for you</p>
@@ -85,7 +151,7 @@ const ItemList = () => {
               </div>
             </div>
           )}
-        </div>
+        </motion.div>
       )}
 
       <div className="shop-page">

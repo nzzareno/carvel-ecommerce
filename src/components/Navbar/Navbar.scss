@@ -11,12 +11,10 @@ nav {
   padding: 16px 7px;
   background: #fff;
  
- 
- 
   font-family: "Roboto", sans-serif;
   width: 100%;
   font-weight: lighter;
- 
+
   z-index: 999;
   .nav__container {
     display: flex;
@@ -79,7 +77,7 @@ nav {
 .nav--button {
   text-decoration: none;
   text-transform: uppercase;
-  font-size:1.9rem;
+  font-size: 1.9rem;
   margin-top: 2px;
   font-family: "Roboto", sans-serif;
 
@@ -120,7 +118,6 @@ nav {
   padding-top: 6x;
   font-size: 1rem;
 }
-
 
 .traspaso .mobile-navigation {
   display: none;

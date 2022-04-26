@@ -4,6 +4,7 @@ export const CarritoContext = createContext();
 
 export default function CartContext({ children }) {
   const [addToCarrito, setAddToCarrito] = useState([]);
+ 
 
   async function addItem(item, quantity) {
     const foundProdIndex = await addToCarrito.findIndex(
@@ -28,6 +29,8 @@ export default function CartContext({ children }) {
     setAddToCarrito(newItems);
   }
 
+  
+
   return (
     <>
       <CarritoContext.Provider
@@ -37,6 +40,7 @@ export default function CartContext({ children }) {
           clear,
           addItem,
           removeItem,
+          
         }}
       >
         {children}

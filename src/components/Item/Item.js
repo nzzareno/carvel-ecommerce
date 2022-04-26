@@ -1,12 +1,31 @@
 import React from "react";
 import "./Item.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+ 
 
 const Item = ({ id, name, imageUrl, price }) => {
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   return (
-    <>
-      <div className="page-content">
-        <div className="cardx" style={{ backgroundImage: `url(${imageUrl})` }}>
+    < >
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ duration: 2 }}
+        className="page-content"
+      >
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          className="cardx"
+          transition={{ duration: 2 }}
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        >
           <div className="contentx">
             <h2 className="titlex">{name}</h2>
             <h2 className="copyx">ONLY FOR ${price}</h2>
@@ -23,8 +42,8 @@ const Item = ({ id, name, imageUrl, price }) => {
               </span>
             </Link>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

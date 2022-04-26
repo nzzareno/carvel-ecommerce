@@ -9,7 +9,6 @@ import { v4 as uuidv4 } from "uuid";
 import { ReactComponent as Womens } from "../../assets/women-coat-svgrepo-com.svg";
 import { ReactComponent as Hats } from "../../assets/accesory-hats-svgrepo-com.svg";
 import { ReactComponent as Glasses } from "../../assets/glasses-svgrepo-com.svg";
-
 import { ReactComponent as Jackets } from "../../assets/jacket-svgrepo-com.svg";
 
 const Cart = () => {
