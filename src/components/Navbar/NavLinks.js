@@ -8,21 +8,25 @@ const NavLinks = (props) => {
   return (
     <div className="nav__container">
       <div id="logoMobile" className="logo-wrap">
-        <Link to="/" className="logo-text" style={{ textDecoration: "none" }}>
+        <Link
+          to="/carvel-ecommerce"
+          className="logo-text"
+          style={{ textDecoration: "none" }}
+        >
           Carvel
         </Link>
       </div>
       <div className="nav_menu">
         <ul>
-        <li onClick={() => props.isMobile && props.closeMobileMenu()}>
+          <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
               to={"/category/Accessories"}
             >
-             ACCESSORIES
+              ACCESSORIES
             </NavLink>
           </li>
-        <li onClick={() => props.isMobile && props.closeMobileMenu()}>
+          <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
               to={"/category/Glasses"}
@@ -48,8 +52,6 @@ const NavLinks = (props) => {
             </NavLink>
           </li>
 
-        
-
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -64,7 +66,7 @@ const NavLinks = (props) => {
               className={({ isActive }) => (isActive ? "active" : "inactive")}
               to={"/signup"}
             >
-              <User style={{color: 'red'}} className="user-logo" />
+              <User style={{ color: "red" }} className="user-logo" />
             </NavLink>
           </li>
           <CartWidget />

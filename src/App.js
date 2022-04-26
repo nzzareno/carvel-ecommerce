@@ -15,7 +15,7 @@ function App() {
         <div className="App">
           <Navbar />
           <Routes>
-            <Route path="/" element={<ItemListContainer />} />
+           
             <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
             <Route path="/category/:id" element={<ItemList />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
