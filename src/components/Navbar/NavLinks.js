@@ -21,7 +21,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/category/Accessories"}
+              to={"/carvel-ecommerce/category/Accessories"}
             >
               ACCESSORIES
             </NavLink>
@@ -29,7 +29,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/category/Glasses"}
+              to={"/carvel-ecommerce/category/Glasses"}
             >
               GLASSES
             </NavLink>
@@ -37,7 +37,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/category/Hats"}
+              to={"/carvel-ecommerce/category/Hats"}
             >
               HATS
             </NavLink>
@@ -46,7 +46,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/category/Jackets"}
+              to={"/carvel-ecommerce/category/Jackets"}
             >
               JACKETS
             </NavLink>
@@ -55,7 +55,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/category/Womens"}
+              to={"/carvel-ecommerce/category/Womens"}
             >
               WOMENS
             </NavLink>
