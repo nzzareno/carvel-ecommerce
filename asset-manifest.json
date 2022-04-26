@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/carvel-ecommerce/static/css/main.7aee9f39.css",
-    "main.js": "/carvel-ecommerce/static/js/main.3673efe0.js",
+    "main.js": "/carvel-ecommerce/static/js/main.abdb61e3.js",
     "static/media/FontsFree-Net-Billabong.ttf": "/carvel-ecommerce/static/media/FontsFree-Net-Billabong.0e94b13a1cfb505ff271.ttf",
     "static/media/jacket-svgrepo-com.svg": "/carvel-ecommerce/static/media/jacket-svgrepo-com.d54972fc190c6c02e31aeb50d0f3898e.svg",
     "static/media/women-coat-svgrepo-com.svg": "/carvel-ecommerce/static/media/women-coat-svgrepo-com.fb227039053d43a447c117f03d15a4de.svg",
@@ -11,10 +11,10 @@
     "static/media/accesory-hats-svgrepo-com.svg": "/carvel-ecommerce/static/media/accesory-hats-svgrepo-com.d81c88771e3a3da7f17c083ddece0e34.svg",
     "static/media/prouser.svg": "/carvel-ecommerce/static/media/prouser.af0575de035b93fcf23e82c71cfd49d1.svg",
     "main.7aee9f39.css.map": "/carvel-ecommerce/static/css/main.7aee9f39.css.map",
-    "main.3673efe0.js.map": "/carvel-ecommerce/static/js/main.3673efe0.js.map"
+    "main.abdb61e3.js.map": "/carvel-ecommerce/static/js/main.abdb61e3.js.map"
   },
   "entrypoints": [
     "static/css/main.7aee9f39.css",
-    "static/js/main.3673efe0.js"
+    "static/js/main.abdb61e3.js"
   ]
 }
