@@ -13,11 +13,11 @@ const Item = ({ id, name, imageUrl, price }) => {
             <Link
               style={{ textDecoration: "none" }}
               className="btnx"
-              to={`/item/${id}`}
+              to={`/carvel-ecommerce/item/${id}`}
             >
               <span
                 style={{ textDecoration: "none", color: "white" }}
-                to={`/item/${id}`}
+                to={`/carvel-ecommerce/item/${id}`}
               >
                 SHOP NOW
               </span>

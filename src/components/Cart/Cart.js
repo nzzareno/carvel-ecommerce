@@ -157,7 +157,7 @@ const Cart = () => {
           >
             The cart is empty... Start enjoying our products and visit us again
           </h1>
-          <Link to={`/`} className="button-backhome">
+          <Link to={`/carvel-ecommerce`} className="button-backhome">
             GO BACK TO HOME
           </Link>
           <div
@@ -169,7 +169,7 @@ const Cart = () => {
             }}
           >
             <Link
-              to={"/category/Glasses"}
+              to={"/carvel-ecommerce/category/Glasses"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -183,7 +183,7 @@ const Cart = () => {
               </span>
             </Link>
             <Link
-              to={"/category/Hats"}
+              to={"/carvel-ecommerce/category/Hats"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -197,7 +197,7 @@ const Cart = () => {
               </span>
             </Link>
             <Link
-              to={"/category/Jackets"}
+              to={"/carvel-ecommerce/category/Jackets"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -211,7 +211,7 @@ const Cart = () => {
               </span>
             </Link>
             <Link
-              to={"/category/Womens"}
+              to={"/carvel-ecommerce/category/Womens"}
               style={{
                 display: "flex",
                 flexDirection: "row",

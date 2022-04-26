@@ -8,7 +8,7 @@ const CartWidget = () => {
   let { addToCarrito } = useContext(CarritoContext);
   
   return (
-    <Link to={"/cart"}>
+    <Link to={"/carvel-ecommerce/cart"}>
       <div className="cart-icon">
         <Carrito className="shopping-icon" />
         <span className="item-count">
