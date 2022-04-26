@@ -8,7 +8,7 @@ const NavLinks = (props) => {
   return (
     <div className="nav__container">
       <div id="logoMobile" className="logo-wrap">
-        <Link to="/" className="logo-text" style={{ textDecoration: "none" }}>
+        <Link to="/carvel-ecommerce" className="logo-text" style={{ textDecoration: "none" }}>
           Carvel
         </Link>
       </div>
