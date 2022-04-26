@@ -27,7 +27,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  color: white;
+  color: rgb(0, 0, 0);
 
   font-family: "Oswald", sans-serif;
 }
@@ -39,6 +39,7 @@
   font-size: 1em;
   text-transform: lowercase;
   opacity: 0.8;
+  color: #02025b;
   font-family: "Rubik", sans-serif;
 }
 
@@ -169,7 +170,35 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  .yellowpast {
+    height: 1500px;
+    width: 100%;
+    background-size: contain;
+  }
+
+  .inside-text-oldman {
+    position: absolute;
+    color: white;
+    top: 0;
+  }
+
+  .poster-image {
+    width: 100%;
+    height: 428px;
+  }
+}
+
+.container-imagex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #FED557;
   .yellowpast {
     height: 1500px;
     width: 100%;

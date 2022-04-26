@@ -15,7 +15,7 @@ const Item = ({ id, name, imageUrl, price }) => {
         initial="hidden"
         animate="visible"
         variants={variants}
-        transition={{ duration: 2 }}
+        transition={{ duration: 3 }}
         className="page-content"
       >
         <motion.div
@@ -23,7 +23,7 @@ const Item = ({ id, name, imageUrl, price }) => {
           animate="visible"
           variants={variants}
           className="cardx"
-          transition={{ duration: 2 }}
+          transition={{ duration: 3 }}
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="contentx">

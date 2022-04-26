@@ -110,13 +110,21 @@ const ItemList = () => {
 
   return (
     <>
-      {productos.length > 0 && (
+      {
         <motion.div
-          className="container-image"
+          className={
+            id === "Hats" ||
+            id === "Jackets" ||
+            id === "Womens" ||
+            id === "Glasses" ||
+            id === "Accessories"
+              ? "container-image"
+              : "container-imagex"
+          }
           initial="hidden"
           animate="visible"
           variants={variants}
-          transition={{ duration: 7 }}
+          transition={{ duration: 5 }}
         >
           <h1 className="title-collection">
             <CollectionTitle productos={productos} />
@@ -128,7 +136,6 @@ const ItemList = () => {
             initial="hidden"
             animate="visible"
             variants={variants}
-            transition={{ duration: 7 }}
           />
 
           {!id && (
@@ -152,7 +159,7 @@ const ItemList = () => {
             </div>
           )}
         </motion.div>
-      )}
+      }
 
       <div className="shop-page">
         {productos.length === 0 ? (
