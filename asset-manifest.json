@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/carvel-ecommerce/static/css/main.a6a6278d.css",
-    "main.js": "/carvel-ecommerce/static/js/main.ecc75e43.js",
+    "main.css": "/carvel-ecommerce/static/css/main.7aee9f39.css",
+    "main.js": "/carvel-ecommerce/static/js/main.34cbc779.js",
     "static/media/HatPicture.jpg": "/carvel-ecommerce/static/media/HatPicture.c37dd45bfd55eed8fb9d.jpg",
     "static/media/WomenImage.jpg": "/carvel-ecommerce/static/media/WomenImage.c0a9fc5ef3cb0ac6254e.jpg",
     "static/media/GlassesUltimate.jpg": "/carvel-ecommerce/static/media/GlassesUltimate.cabee74cb5e5133b0f74.jpg",
@@ -9,7 +9,6 @@
     "static/media/HatImage.jpg": "/carvel-ecommerce/static/media/HatImage.d344d155ff5bec51001a.jpg",
     "static/media/JacketImage.jpg": "/carvel-ecommerce/static/media/JacketImage.c7b3632082cc84915407.jpg",
     "static/media/FontsFree-Net-Billabong.ttf": "/carvel-ecommerce/static/media/FontsFree-Net-Billabong.0e94b13a1cfb505ff271.ttf",
-    "static/media/men-suit-svgrepo-com.svg": "/carvel-ecommerce/static/media/men-suit-svgrepo-com.722731dc3033c3ff8e199e14ea036112.svg",
     "static/media/jacket-svgrepo-com.svg": "/carvel-ecommerce/static/media/jacket-svgrepo-com.d54972fc190c6c02e31aeb50d0f3898e.svg",
     "static/media/women-coat-svgrepo-com.svg": "/carvel-ecommerce/static/media/women-coat-svgrepo-com.fb227039053d43a447c117f03d15a4de.svg",
     "static/media/shopping-bag.svg": "/carvel-ecommerce/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
@@ -17,11 +16,11 @@
     "index.html": "/carvel-ecommerce/index.html",
     "static/media/accesory-hats-svgrepo-com.svg": "/carvel-ecommerce/static/media/accesory-hats-svgrepo-com.d81c88771e3a3da7f17c083ddece0e34.svg",
     "static/media/prouser.svg": "/carvel-ecommerce/static/media/prouser.af0575de035b93fcf23e82c71cfd49d1.svg",
-    "main.a6a6278d.css.map": "/carvel-ecommerce/static/css/main.a6a6278d.css.map",
-    "main.ecc75e43.js.map": "/carvel-ecommerce/static/js/main.ecc75e43.js.map"
+    "main.7aee9f39.css.map": "/carvel-ecommerce/static/css/main.7aee9f39.css.map",
+    "main.34cbc779.js.map": "/carvel-ecommerce/static/js/main.34cbc779.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6a6278d.css",
-    "static/js/main.ecc75e43.js"
+    "static/css/main.7aee9f39.css",
+    "static/js/main.34cbc779.js"
   ]
 }
