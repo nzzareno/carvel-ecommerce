@@ -19,7 +19,7 @@ const ItemAside = ({ producto }) => {
     ]);
     addItem(producto, cantidadCarro);
   };
-  
+
   return (
     <div className="container-vertical">
       <aside style={{ width: "100%" }}>
