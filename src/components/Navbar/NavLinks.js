@@ -8,7 +8,7 @@ const NavLinks = (props) => {
   return (
     <div className="nav__container">
       <div id="logoMobile" className="logo-wrap">
-        <Link to="/carvel-ecommerce" className="logo-text" style={{ textDecoration: "none" }}>
+        <Link to="/" className="logo-text" style={{ textDecoration: "none" }}>
           Carvel
         </Link>
       </div>
@@ -17,7 +17,7 @@ const NavLinks = (props) => {
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/carvel-ecommerce/category/Accessories"}
+              to={"/category/Accessories"}
             >
              ACCESSORIES
             </NavLink>
@@ -25,7 +25,7 @@ const NavLinks = (props) => {
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/carvel-ecommerce/category/Glasses"}
+              to={"/category/Glasses"}
             >
               GLASSES
             </NavLink>
@@ -33,7 +33,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/carvel-ecommerce/category/Hats"}
+              to={"/category/Hats"}
             >
               HATS
             </NavLink>
@@ -42,7 +42,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/carvel-ecommerce/category/Jackets"}
+              to={"/category/Jackets"}
             >
               JACKETS
             </NavLink>
@@ -53,7 +53,7 @@ const NavLinks = (props) => {
           <li onClick={() => props.isMobile && props.closeMobileMenu()}>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to={"/carvel-ecommerce/category/Womens"}
+              to={"/category/Womens"}
             >
               WOMENS
             </NavLink>

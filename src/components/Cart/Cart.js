@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ReactComponent as Womens } from "../../assets/women-coat-svgrepo-com.svg";
 import { ReactComponent as Hats } from "../../assets/accesory-hats-svgrepo-com.svg";
 import { ReactComponent as Glasses } from "../../assets/glasses-svgrepo-com.svg";
-import { ReactComponent as Mens } from "../../assets/men-suit-svgrepo-com.svg";
+
 import { ReactComponent as Jackets } from "../../assets/jacket-svgrepo-com.svg";
 
 const Cart = () => {
@@ -169,7 +169,7 @@ const Cart = () => {
             }}
           >
             <Link
-              to={"/carvel-ecommerce/category/Glasses"}
+              to={"/category/Glasses"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -183,7 +183,7 @@ const Cart = () => {
               </span>
             </Link>
             <Link
-              to={"/carvel-ecommerce/category/Hats"}
+              to={"/category/Hats"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -197,7 +197,7 @@ const Cart = () => {
               </span>
             </Link>
             <Link
-              to={"/carvel-ecommerce/category/Jackets"}
+              to={"/category/Jackets"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -211,7 +211,7 @@ const Cart = () => {
               </span>
             </Link>
             <Link
-              to={"/carvel-ecommerce/category/Womens"}
+              to={"/category/Womens"}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -224,7 +224,7 @@ const Cart = () => {
                 <Womens className="iconpower" />
               </span>
             </Link>
-            <Link
+            {/* <Link
               to={"/carvel-ecommerce/category/Mens"}
               style={{
                 display: "flex",
@@ -236,7 +236,7 @@ const Cart = () => {
               <span>
                 <Mens className="iconpower" />
               </span>
-            </Link>
+            </Link> */}
           </div>
         </>
       )}
