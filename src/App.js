@@ -8,7 +8,6 @@ import NotFound404 from "./components/NotFound404/NotFound404";
 import Cart from "./components/Cart/Cart";
 import CartContext from "./context/CartContext";
 
-
 function App() {
   return (
     <>
@@ -17,7 +16,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
             <Route path="/category/:id" element={<ItemList />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
