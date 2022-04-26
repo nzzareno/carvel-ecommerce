@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/carvel-ecommerce/static/css/main.7aee9f39.css",
-    "main.js": "/carvel-ecommerce/static/js/main.294debe9.js",
+    "main.js": "/carvel-ecommerce/static/js/main.ec7ff040.js",
     "static/media/HatPicture.jpg": "/carvel-ecommerce/static/media/HatPicture.c37dd45bfd55eed8fb9d.jpg",
     "static/media/WomenImage.jpg": "/carvel-ecommerce/static/media/WomenImage.c0a9fc5ef3cb0ac6254e.jpg",
     "static/media/GlassesUltimate.jpg": "/carvel-ecommerce/static/media/GlassesUltimate.cabee74cb5e5133b0f74.jpg",
@@ -17,10 +17,10 @@
     "static/media/accesory-hats-svgrepo-com.svg": "/carvel-ecommerce/static/media/accesory-hats-svgrepo-com.d81c88771e3a3da7f17c083ddece0e34.svg",
     "static/media/prouser.svg": "/carvel-ecommerce/static/media/prouser.af0575de035b93fcf23e82c71cfd49d1.svg",
     "main.7aee9f39.css.map": "/carvel-ecommerce/static/css/main.7aee9f39.css.map",
-    "main.294debe9.js.map": "/carvel-ecommerce/static/js/main.294debe9.js.map"
+    "main.ec7ff040.js.map": "/carvel-ecommerce/static/js/main.ec7ff040.js.map"
   },
   "entrypoints": [
     "static/css/main.7aee9f39.css",
-    "static/js/main.294debe9.js"
+    "static/js/main.ec7ff040.js"
   ]
 }
