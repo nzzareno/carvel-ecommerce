@@ -17,8 +17,8 @@ function App() {
           <Navbar />
           <Routes>
         
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/category/:id" element={<ItemList />} />
+            <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
+            <Route path="/carvel-ecommerce/category/:id" element={<ItemList />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound404 />} />
