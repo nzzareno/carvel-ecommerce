@@ -12,7 +12,7 @@ const ItemDetail = ({ producto }) => {
           <Link
             style={{ textDecoration: "none" }}
             className="captador"
-            to={"/"}
+            to={"/carvel-ecommerce"}
           >
             Home
           </Link>
@@ -22,7 +22,7 @@ const ItemDetail = ({ producto }) => {
           <Link
             style={{ textDecoration: "none" }}
             className="subcaptador"
-            to={`/category/${producto.category}`}
+            to={`/carvel-ecommerce/category/${producto.category}`}
           >
             {producto.category}
           </Link>

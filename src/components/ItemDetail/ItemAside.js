@@ -47,7 +47,7 @@ const ItemAside = ({ producto }) => {
           <div>
             {quantityCarro ? (
               <>
-                <Link to="/cart">
+                <Link to="/carvel-ecommerce/cart">
                   <button className="close zbutton">Finish my purchase</button>
                 </Link>
               </>
