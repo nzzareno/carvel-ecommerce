@@ -1,0 +1,118 @@
+.footer-footer {
+  position: relative;
+  min-width: 100%;
+  background-color: #171717;
+
+  padding: 14px 10px;
+  display: flex;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-container {
+  width: 100%;
+  z-index: -1;
+}
+
+.footer-links-titles {
+  color: rgb(188, 188, 188);
+  text-decoration: none;
+
+  margin: 0 14px;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.footer-links-titles:hover {
+  color: papayawhip;
+}
+
+.footer-footer .social-icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.footer-footer .social-icon li,
+footer .menu li {
+  list-style: none;
+}
+
+.footer-footer .social-icon li .social-links,
+.footer-footer .menu li .social-links {
+  font-size: 2em;
+  display: inline-block;
+  transition: 0.5s;
+  margin: 0 10px;
+  color: #fff;
+}
+
+.footer-footer .social-icon li .social-links:hover {
+  transform: translateY(-7px);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.footer-footer .social-icon li:nth-child(1) .social-links:hover {
+  color: #fff;
+}
+
+.instagramIcon {
+  color: crimson;
+}
+
+.footer-footer .social-icon li .social-links {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0 21px;
+  transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.footer-footer .menu li .social-links:hover {
+  opacity: 1;
+}
+
+.footer-footer p {
+  color: rgb(121, 0, 0);
+  text-align: center;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 1.4em;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+    transition: color 1s linear;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer-links-titles {
+    color: rgb(188, 188, 188);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 7px !important;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+  }
+
+  .footer-footer p {
+    font-size: 1em;
+  }
+}

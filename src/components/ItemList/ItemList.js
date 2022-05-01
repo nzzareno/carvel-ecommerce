@@ -19,6 +19,8 @@ const ItemList = () => {
   const [yellowpast, setYellowpast] = useState("");
   const { id } = useParams();
 
+  // STORAGE IMAGES FOR COLLECTIONS
+
   const storage = getStorage();
   const httpsReferenceGlasses = ref(
     storage,
@@ -47,6 +49,8 @@ const ItemList = () => {
   );
 
   useEffect(() => {
+    // STORAGE
+
     getDownloadURL(httpsReferenceGlasses).then((url) => {
       setGlassesImage(url);
     });
@@ -70,6 +74,8 @@ const ItemList = () => {
     getDownloadURL(httpsReferenceYellowPast).then((url) => {
       setYellowpast(url);
     });
+
+    //FIRESTORE
 
     let productosRef;
     if (!id) {

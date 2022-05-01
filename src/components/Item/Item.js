@@ -2,7 +2,6 @@ import React from "react";
 import "./Item.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
- 
 
 const Item = ({ id, name, imageUrl, price }) => {
   const variants = {
@@ -10,7 +9,7 @@ const Item = ({ id, name, imageUrl, price }) => {
     visible: { opacity: 1 },
   };
   return (
-    < >
+    <>
       <motion.div
         initial="hidden"
         animate="visible"

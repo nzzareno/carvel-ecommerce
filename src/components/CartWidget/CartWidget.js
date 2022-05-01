@@ -6,7 +6,7 @@ import "./CartWidget.scss";
 
 const CartWidget = () => {
   let { addToCarrito } = useContext(CarritoContext);
-  
+
   return (
     <Link to={"/carvel-ecommerce/cart"}>
       <div className="cart-icon">

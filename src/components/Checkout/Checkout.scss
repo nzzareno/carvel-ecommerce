@@ -1,0 +1,86 @@
+.checkout-container {
+  min-height: 76.09vh;
+  background-color: crimson;
+  z-index: 999;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.p-checkout {
+  text-align: center;
+  line-height: 2 !important;
+  font-size: 17px !important;
+  color: #000 !important;
+}
+
+.fa-secondary {
+  opacity: 0.4;
+}
+
+.process {
+  font-size: 24px !important;
+  font-weight: 500;
+}
+
+.questionheadertext {
+  grid-area: header-text;
+  font-size: 31px;
+  color: whitesmoke;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1;
+  margin: 6px auto 26px;
+  margin-bottom: 10px;
+}
+
+.question-header {
+  display: grid;
+  grid-template:
+    "header-text"
+    "header-image";
+  grid-template-rows: auto auto;
+  grid-gap: 3.16vh;
+  place-items: center;
+
+  text-align: center;
+}
+
+.question-header svg {
+  grid-area: header-image;
+  height: min(121px, 15.57vw);
+  fill: #ffffff;
+}
+
+.question-header svg .fa-primary {
+  opacity: 1;
+  fill: #010179;
+  margin-bottom: 50px !important;
+}
+
+.question-header svg .fa-secondary {
+  opacity: 1;
+
+  fill: #050505b3;
+}
+
+.purchase-confirmation h2 {
+  text-align: center;
+  margin: min(25px, 6.09vw) 0;
+}
+
+.purchase-confirmation h2,
+.purchase-confirmation h3 {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 900;
+  color: #010179;
+}
+
+.purchase-confirmation p {
+  font-size: min(12px, 2.92vw);
+  font-weight: 400;
+  line-height: min(14px, 3.41vw);
+  margin: 14px 0;
+}

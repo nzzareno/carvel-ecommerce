@@ -282,7 +282,6 @@ a-button {
   box-sizing: border-box;
 }
 
- 
 .aok-align-center {
   line-height: 16.8px;
   margin-right: 8px;
@@ -352,8 +351,6 @@ a-button {
   margin-right: 5px;
   margin-top: 5px;
 }
-
- 
 
 .dataspan {
   position: relative;
@@ -607,6 +604,10 @@ $colors: (
   slide: #8fc866,
   offset: #19bc8b,
 );
+
+.ItemDetail-container {
+  min-height: 100vh;
+}
 
 @each $button, $color in $colors {
   .#{$button} {

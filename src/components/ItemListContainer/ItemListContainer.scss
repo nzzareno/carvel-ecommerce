@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   background-color: #fff;
- 
 }
 
 .directory-menu {
@@ -33,7 +31,6 @@
     & .background-image {
       transform: scale(1.4);
       transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-      
     }
 
     & .content {
@@ -86,5 +83,3 @@
     }
   }
 }
-
- 

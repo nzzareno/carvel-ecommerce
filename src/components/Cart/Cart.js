@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CarritoContext } from "../../context/CartContext";
 import "./Cart.scss";
 import { BsTrash } from "react-icons/bs";
@@ -16,16 +16,15 @@ const Cart = () => {
   let { clear } = useContext(CarritoContext);
   let { removeItem } = useContext(CarritoContext);
 
+  let { setOpenModal } = useContext(CarritoContext);
+  let { totalPrice } = useContext(CarritoContext);
+
+  let navigate = useNavigate();
+
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
-
-  const totalPrice = addToCarrito
-    .map((product) => {
-      return product.item.price * product.quantity;
-    })
-    .reduce((item, qty) => item + qty, 0);
 
   const pickData = addToCarrito.map((producto) => {
     return (
@@ -39,7 +38,7 @@ const Cart = () => {
   });
 
   return (
-    <>
+    <div className="cart-wrap">
       {addToCarrito.length > 0 ? (
         addToCarrito.map((producto) => {
           return (
@@ -48,6 +47,7 @@ const Cart = () => {
               animate="visible"
               variants={variants}
               key={uuidv4()}
+              style={{ minHeight: "100%" }}
             >
               <motion.div
                 initial="hidden"
@@ -131,7 +131,7 @@ const Cart = () => {
 
                     <footer className="content">
                       <span className="qt">
-                        <strong>Qty: </strong> {producto.quantity}
+                        <strong>Quantity: </strong> {producto.quantity}
                       </span>
 
                       <h2 className="full-price">
@@ -150,15 +150,15 @@ const Cart = () => {
           <h1
             style={{
               textAlign: "center",
-              fontSize: "42px",
-              borderBottom: "2px solid #ececec",
+              fontSize: "35px",
+              marginTop: "21px",
+              color: "#ccc",
+              borderBottom: "1px solid #ccc",
             }}
           >
             The cart is empty... Start enjoying our products and visit us again
           </h1>
-          <Link to={`/carvel-ecommerce`} className="button-backhome">
-            GO BACK TO HOME
-          </Link>
+
           <div
             style={{
               display: "flex",
@@ -174,6 +174,7 @@ const Cart = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
+                textDecoration: "none",
               }}
             >
               <span>Glasses</span>{" "}
@@ -188,6 +189,7 @@ const Cart = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
+                textDecoration: "none",
               }}
             >
               <span>Hats</span>{" "}
@@ -202,6 +204,7 @@ const Cart = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
+                textDecoration: "none",
               }}
             >
               <span>Jackets</span>{" "}
@@ -216,6 +219,7 @@ const Cart = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
+                textDecoration: "none",
               }}
             >
               <span>Womens</span>{" "}
@@ -223,46 +227,44 @@ const Cart = () => {
                 <Womens className="iconpower" />
               </span>
             </Link>
-            {/* <Link
-              to={"/carvel-ecommerce/category/Mens"}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
-              <span>Mens</span>{" "}
-              <span>
-                <Mens className="iconpower" />
-              </span>
-            </Link> */}
+            <Link to={`/carvel-ecommerce`} className="button-backhome">
+              <span>Go back to home</span>
+            </Link>
           </div>
         </>
       )}
 
       {addToCarrito.length > 0 ? (
-        <footer id="site-footer">
-          <div className="container clearfix">
-            <div className="right">
-              {" "}
-              {pickData}
-              <h1 className="total">
-                Total: <span>${totalPrice} </span>
-              </h1>
-              <Link to={"/checkout"} className="btn">
-                Checkout
-              </Link>
-              <MdOutlineCleaningServices
-                onClick={() => clear()}
-                className="cleared"
-              />
+        <>
+          <footer id="site-footer">
+            <div className="container clearfix">
+              <div className="right">
+                {" "}
+                {pickData}
+                <h1 className="total">
+                  Total: <span>${totalPrice} </span>
+                </h1>
+                <button
+                  onClick={() => {
+                    navigate("/carvel-ecommerce/cart/form");
+                    setOpenModal(true);
+                  }}
+                  className="btn"
+                >
+                  Checkout
+                </button>
+                <MdOutlineCleaningServices
+                  onClick={() => clear()}
+                  className="cleared"
+                />
+              </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        </>
       ) : (
         ""
       )}
-    </>
+    </div>
   );
 };
 

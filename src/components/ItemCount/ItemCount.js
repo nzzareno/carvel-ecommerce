@@ -54,6 +54,7 @@ const ItemCount = ({ stock, initial, onAdd, branded }) => {
             value={item}
             className="ctrl-counter-input"
             type={"number"}
+            disabled="disabled"
           />
         </div>
         <div

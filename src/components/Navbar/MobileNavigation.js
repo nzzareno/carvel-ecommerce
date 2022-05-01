@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CgMenuRound, CgCloseO } from "react-icons/cg";
+import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 
 const MobileNavigation = () => {
@@ -28,7 +29,7 @@ const MobileNavigation = () => {
       <div className="logo-wrap">
         <div>
           <h4 className="logo-text">
-            <a href="/">Carvel</a>
+            <Link to="/carvel-ecommerce">Carvel</Link>
           </h4>
         </div>
       </div>

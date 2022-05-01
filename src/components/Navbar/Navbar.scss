@@ -8,9 +8,9 @@
 }
 
 nav {
-  padding: 16px 7px;
+  padding: 17px 7px;
   background: #fff;
- 
+   
   font-family: "Roboto", sans-serif;
   width: 100%;
   font-weight: lighter;
@@ -248,10 +248,11 @@ nav {
 
         width: 100%;
         background-color: #fff;
-        border-bottom: 1.99px solid #dbdbdb;
+        border-bottom: 2px solid #dbdbdb;
 
-        li {
-          padding: 0px 0;
+        li:nth-child(1) {
+          margin-top: 10px;
+          margin-bottom: -5px;
 
           & a:hover {
             color: black;

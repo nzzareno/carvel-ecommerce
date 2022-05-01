@@ -4,10 +4,13 @@ export const CarritoContext = createContext();
 
 export default function CartContext({ children }) {
   const [addToCarrito, setAddToCarrito] = useState([]);
- 
+  const [openModal, setOpenModal] = useState(false);
+  const [orderId, setOrderId] = useState("");
+  const [orderName, setOrderName] = useState("");
+  const [orderPrice, setOrderPrice] = useState("");
 
   async function addItem(item, quantity) {
-    const foundProdIndex = await addToCarrito.findIndex(
+    const foundProdIndex = addToCarrito.findIndex(
       (product) => product.item.id === item.id
     );
 
@@ -20,6 +23,21 @@ export default function CartContext({ children }) {
     }
   }
 
+  const totalPrice = addToCarrito
+    .map((product) => {
+      return product.item.price * product.quantity;
+    })
+    .reduce((item, qty) => item + qty, 0);
+
+  const fundamentalDataProduct = addToCarrito.map((product) => {
+    return {
+      id: product.item.id,
+      title: product.item.name,
+      price: product.item.price,
+      quantity: product.quantity,
+    };
+  });
+
   function clear() {
     setAddToCarrito([]);
   }
@@ -28,8 +46,6 @@ export default function CartContext({ children }) {
     const newItems = addToCarrito.filter((item) => item.item.id !== itemId);
     setAddToCarrito(newItems);
   }
-
-  
 
   return (
     <>
@@ -40,7 +56,16 @@ export default function CartContext({ children }) {
           clear,
           addItem,
           removeItem,
-          
+          openModal,
+          setOpenModal,
+          totalPrice,
+          fundamentalDataProduct,
+          orderId,
+          setOrderId,
+          orderName,
+          setOrderName,
+          orderPrice,
+          setOrderPrice,
         }}
       >
         {children}

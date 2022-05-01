@@ -4,9 +4,9 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../ItemListContainer/Spinner";
 import { db } from "../../index";
 import { getDoc, doc } from "firebase/firestore";
+import "../ItemDetail/ItemDetail.scss";
 
 const ItemDetailContainer = () => {
- 
   const [producto, setProducto] = useState([]);
   const { id } = useParams();
 
@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <div>
+      <div className="ItemDetail-container">
         {producto.id ? (
           <>
             <ItemDetail producto={producto} />
