@@ -151,7 +151,7 @@ const Formulario = memo(() => {
               e.stopPropagation();
             }}
             className="modalContainer"
-          >
+          > 
             <img
               className="image-modal"
               src="https://raw.githubusercontent.com/nzzareno/web-asyuth/main/img/stylepure.jpg"
