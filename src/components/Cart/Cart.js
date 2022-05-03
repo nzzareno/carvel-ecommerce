@@ -38,7 +38,7 @@ const Cart = () => {
   });
 
   return (
-    <div className="cart-wrap">
+    <div className={addToCarrito.length > 0 ? 'cart-wrapx' : 'cart-wrap'} >
       {addToCarrito.length > 0 ? (
         addToCarrito.map((producto) => {
           return (
@@ -54,6 +54,7 @@ const Cart = () => {
                 animate="visible"
                 variants={variants}
                 className="container"
+              
               >
                 <motion.section
                   initial="hidden"
@@ -156,7 +157,7 @@ const Cart = () => {
               borderBottom: "1px solid #ccc",
             }}
           >
-            The cart is empty... Start enjoying our products and visit us again
+            .
           </h1>
 
           <div
@@ -165,8 +166,21 @@ const Cart = () => {
               textDecoration: "none",
               flexDirection: "column",
               alignItems: "flex-end",
+              marginTop: "24px",
             }}
           >
+            <h1
+              style={{
+                color: "#ccc",
+                borderBottom: "1px solid #ccc",
+                textAlign: "center",
+                fontSize: "35px",
+                marginRight: "252px",
+              }}
+            >
+              The cart is empty... Start enjoying our products and visit us
+              again
+            </h1>
             <Link
               to={"/carvel-ecommerce/category/Glasses"}
               style={{
