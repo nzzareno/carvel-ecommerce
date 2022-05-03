@@ -105,7 +105,7 @@ const Cart = () => {
                         </span>
                       </h5>
                       <h5>
-                        <span>
+                        <span style={{ marginTop: "55px" }}>
                           <small className="final-price">
                             <span
                               style={{
@@ -151,7 +151,7 @@ const Cart = () => {
             style={{
               textAlign: "center",
               fontSize: "35px",
-              marginTop: "21px",
+              marginTop: "71px",
               color: "#ccc",
               borderBottom: "1px solid #ccc",
             }}

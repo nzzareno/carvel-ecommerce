@@ -27,7 +27,7 @@ const Formulario = memo(() => {
     totalPrice,
     fundamentalDataProduct,
     setOrderPrice,
-
+    orderId,
     setOrderId,
   } = useContext(CarritoContext);
 
@@ -143,7 +143,7 @@ const Formulario = memo(() => {
   }
 
   return (
-    <>
+    <div className="main">
       {openModal ? (
         <div onClick={() => setOpenModal(!openModal)} className="overlay">
           <div
@@ -151,7 +151,7 @@ const Formulario = memo(() => {
               e.stopPropagation();
             }}
             className="modalContainer"
-          > 
+          >
             <img
               className="image-modal"
               src="https://raw.githubusercontent.com/nzzareno/web-asyuth/main/img/stylepure.jpg"
@@ -170,9 +170,9 @@ const Formulario = memo(() => {
                 X
               </p>
               <div className="content-modal">
-                <h1>Hello there!</h1>
-                <h4>to buy, please enter</h4>
-                <h4>your information data</h4>
+                <h1 className="saludo">Hello there!</h1>
+                <h1 className="sub-saludo">to buy, please enter</h1>
+                <h1  className="sub-saludox">your information data</h1>
               </div>
               <div className="form-container">
                 <form
@@ -285,13 +285,6 @@ const Formulario = memo(() => {
                   </div>
                   <div className="btnContainer">
                     <button
-                      type="submit"
-                      onClick={formik.handleSubmit}
-                      className="btnPrimary"
-                    >
-                      <span className="bold">FINISH MY BUY</span>
-                    </button>
-                    <button
                       onClick={() => {
                         navigate("/carvel-ecommerce/");
                         setAddToCarrito([]);
@@ -299,6 +292,13 @@ const Formulario = memo(() => {
                       className="btnOutline"
                     >
                       <span className="bold">CANCEL</span>
+                    </button>
+                    <button
+                      type="submit"
+                      onClick={formik.handleSubmit}
+                      className="btnPrimary"
+                    >
+                      <span className="bold">BUY NOW</span>
                     </button>
                   </div>
                 </form>
@@ -312,7 +312,7 @@ const Formulario = memo(() => {
           back to home and select what you like best!
         </h1>
       )}
-    </>
+    </div>
   );
 });
 

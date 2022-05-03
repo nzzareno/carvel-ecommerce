@@ -10,9 +10,9 @@ function CollectionTitle({ productos }) {
         .map((item, index) => (
           <div key={index}>
             <h3 className="collection-title" key={index}>
-              {item.chosen ? "Carvel" : item.category} Collections: Comfortably
-              feel of the 
-              <span style={{ color: "purple" }}>
+              {item.chosen ? "Carvel" : item.category} Collections: <br/> Comfortably
+              feel of <br/> the 
+              <span style={{ color: "purple", textShadow:"none" }}>
                 <Typical
                   loop={Infinity}
                   wrapper="b"

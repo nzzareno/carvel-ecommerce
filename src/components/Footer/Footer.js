@@ -49,7 +49,7 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-        <ul className="menu">
+        <ul className="menux">
           <li>
             <Link className="footer-links-titles" to={"#"}>
               Home

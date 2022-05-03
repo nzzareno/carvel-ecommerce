@@ -9,6 +9,8 @@ import Footer from "./components/Footer/Footer";
 import Checkout from "./components/Checkout/Checkout";
 import Formulario from "./components/Formulario/Formulario";
 import { Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navbar/Navigation";
+import { ReactSmartScroller } from "react-smart-scroller";
 
 function App() {
   return (
@@ -18,10 +20,16 @@ function App() {
         <Routes>
           <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
           <Route path="/carvel-ecommerce/category/:id" element={<ItemList />} />
-          <Route path="/carvel-ecommerce/item/:id" element={<ItemDetailContainer />} />
+          <Route
+            path="/carvel-ecommerce/item/:id"
+            element={<ItemDetailContainer />}
+          />
           <Route path="/carvel-ecommerce/cart" element={<Cart />} />
           <Route path="/carvel-ecommerce/cart/form" element={<Formulario />} />
-          <Route path="/carvel-ecommerce/cart/checkout" element={<Checkout />} />
+          <Route
+            path="/carvel-ecommerce/cart/checkout"
+            element={<Checkout />}
+          />
           <Route path="*" element={<NotFound404 />} />
         </Routes>
         <Footer />

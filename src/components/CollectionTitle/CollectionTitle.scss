@@ -1,5 +1,16 @@
-h3 {
+.collection-title {
   text-align: center;
-  font-size: 25px;
-  color: white;
+  font-size: 3.3rem;
+  color: rgb(255, 255, 255);
+}
+
+.collection-title-typical {
+  z-index: -1;
+}
+
+@media screen and(max-width: 1600px) {
+  .collection-title {
+  display: none;
+    
+  }
 }

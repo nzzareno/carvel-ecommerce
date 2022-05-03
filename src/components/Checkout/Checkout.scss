@@ -1,7 +1,8 @@
 .checkout-container {
-  min-height: 76.09vh;
+  min-height: 85.09vh;
   background-color: crimson;
   z-index: 999;
+
 }
 
 :focus-visible {
@@ -33,6 +34,7 @@
   line-height: 1;
   margin: 6px auto 26px;
   margin-bottom: 10px;
+  margin-top: 90px;
 }
 
 .question-header {

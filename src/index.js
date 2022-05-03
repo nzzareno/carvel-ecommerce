@@ -7,7 +7,7 @@ import CartContext from "./context/CartContext";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-
+import { ReactSmartScroller } from "react-smart-scroller";
 const firebaseConfig = {
   apiKey: "AIzaSyBA5Rq1LrWTlWshf8roMksMIdroDgcqvkU",
   authDomain: "carvel-ecommerce-coder.firebaseapp.com",
@@ -25,7 +25,9 @@ ReactDOM.render(
   <React.StrictMode>
     <CartContext>
       <Router>
-        <App />
+     
+          <App />
+       
       </Router>
     </CartContext>
   </React.StrictMode>,
