@@ -152,9 +152,9 @@ const Cart = () => {
             style={{
               textAlign: "center",
               fontSize: "35px",
-              marginTop: "71px",
+              marginTop: "30px",
               color: "#ccc",
-              borderBottom: "1px solid #ccc",
+             
             }}
           >
             .
@@ -165,17 +165,17 @@ const Cart = () => {
               display: "flex",
               textDecoration: "none",
               flexDirection: "column",
-              alignItems: "flex-end",
-              marginTop: "24px",
+              alignItems: "center",
+              backgroundColor: "#333",
             }}
           >
             <h1
               style={{
-                color: "#ccc",
+                color: "white",
                 borderBottom: "1px solid #ccc",
                 textAlign: "center",
-                fontSize: "35px",
-                marginRight: "252px",
+                fontSize: "45px",
+                width: "100%",
               }}
             >
               The cart is empty... Start enjoying our products and visit us

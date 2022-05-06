@@ -12,8 +12,6 @@
 
 #site-header {
   margin: 0 0 30px 0;
- 
-
 }
 
 #site-header h1 {
@@ -22,7 +20,6 @@
   padding: 40px 0;
   position: relative;
   margin: 0;
-  
 }
 
 #site-header h1 span {
@@ -58,25 +55,21 @@
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  
 }
 
 .cart-wrap {
   min-height: 100vh;
-  
-  margin-top: -71px;
+  background-color: #333;
   
 }
 
 .cart-wrapx {
   min-height: 100vh;
- background-color: green;
   
 }
 
 #cart {
   width: 100%;
-  
 }
 
 #cart h1 {
@@ -115,13 +108,11 @@
   -ms-transition: margin 0.2s linear, opacity 0.2s linear;
   -o-transition: margin 0.2s linear, opacity 0.2s linear;
   transition: margin 0.2s linear, opacity 0.2s linear;
-  
 }
 
 .product img {
   width: 100%;
   height: 100%;
-  
 }
 
 .product header,
@@ -131,7 +122,6 @@
   border-style: none none solid none;
   float: left;
   margin-top: 20px;
-  
 }
 
 .product header {
@@ -150,7 +140,6 @@
 
 .product header:hover h3 {
   bottom: 73px;
-  
 }
 
 .product header h3 {
@@ -184,7 +173,6 @@
   padding: 0 2px;
   width: 75%;
   margin-top: 52px;
-   
 }
 
 .product h1 {
@@ -192,8 +180,6 @@
   text-shadow: 1px 0px 1px black;
   font-size: 24px;
   font-weight: 700 !important;
- 
- 
 }
 
 .product footer.content {
@@ -211,7 +197,7 @@
   line-height: 49px;
   width: 70px;
   margin: 0;
-  
+
   padding: 0 10px;
   font-family: "roboto";
   cursor: pointer;
@@ -260,7 +246,6 @@
 .qt-minus {
   display: block;
   float: left;
-  
 }
 
 .qt {
@@ -429,13 +414,11 @@
 .initial-price {
   color: #00640a;
   margin-right: -5px;
-  
 }
 
 .final-price {
   color: #000000;
   margin-right: -5px;
-
 }
 
 .iconpower {

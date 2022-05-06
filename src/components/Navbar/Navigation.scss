@@ -19,7 +19,7 @@
 .menu-icon:checked + label,
 .menu-icon:not(:checked) + label {
   position: fixed;
-  top: 27px;
+  top: 28px;
   right: 20px !important;
   display: block;
   width: 30px;
@@ -92,7 +92,7 @@
   z-index: 9;
   overflow: hidden !important;
 
-  background-color: #ffffffe4;
+  background-color: #ffffff;
   animation: border-transform 3s linear infinite;
 }
 @keyframes border-transform {
@@ -237,10 +237,12 @@
   .menu-icon:checked + label,
   .menu-icon:not(:checked) + label {
     right: 55px;
+    
   }
 
   .nav ul li a {
     font-size: 5vh;
+    
   }
 
   .nav ul {
@@ -263,9 +265,9 @@
   align-items: center;
   margin: 0 auto;
   position: fixed;
-
+  top: 0;
   background-color: rgb(255, 255, 255);
-  padding: 17px 7px;
+  padding: 14px 7px;
   width: 100%;
   z-index: 9;
 

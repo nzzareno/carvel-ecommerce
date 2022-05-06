@@ -12,7 +12,7 @@ function CollectionTitle({ productos }) {
             <h3 className="collection-title" key={index}>
               {item.chosen ? "Carvel" : item.category} Collections: <br/> Comfortably
               feel of <br/> the 
-              <span style={{ color: "purple", textShadow:"none" }}>
+              <span style={{ color: "#fff", textShadow:"none" }}>
                 <Typical
                   loop={Infinity}
                   wrapper="b"

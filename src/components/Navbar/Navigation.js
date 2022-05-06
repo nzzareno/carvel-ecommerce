@@ -4,7 +4,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import { useState } from "react";
 
 const Navigation = () => {
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(true);
 
   const handleToggle = () => {
     setActive(true);

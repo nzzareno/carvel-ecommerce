@@ -9,9 +9,9 @@ const CartWidget = () => {
 
   return (
     <Link to={"/carvel-ecommerce/cart"}>
-      <div className="cart-icon">
-        <Carrito className="shopping-icon" />
-        <span className="item-count">
+      <div style={{zIndex: 9999}} className="cart-icon">
+        <Carrito  className="shopping-icon" />
+        <span className="item-count" >
           {[addToCarrito.length < 1 ? "" : addToCarrito.length]}
         </span>
       </div>

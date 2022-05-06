@@ -145,27 +145,35 @@ const ItemList = () => {
           />
 
           {!id && (
-            <div style={{ background: "black" }} id="rotate-words">
-              <div>
-                NEW ARRIVALS
-                <p>for you</p>
+            <>
+              <div style={{ background: "black" }} id="rotate-words">
+                <div>
+                  NEW ARRIVALS
+                  <p>for you</p>
+                </div>
+                <div>
+                  BEST SELLERS
+                  <p>for you</p>
+                </div>
+                <div>
+                  PERFECT CHOICES
+                  <p>for you</p>
+                </div>
+                <div>
+                  YOU WILL FOLLOW AN INSTINCT
+                  <p>for you.</p>
+                </div>
               </div>
-              <div>
-                BEST SELLERS
-                <p>for you</p>
-              </div>
-              <div>
-                PERFECT CHOICES
-                <p>for you</p>
-              </div>
-              <div>
-                YOU WILL FOLLOW AN INSTINCT
-                <p>for you.</p>
-              </div>
-            </div>
+            </>
           )}
         </motion.div>
       }
+
+      {!id && (
+        <div className="Added">
+          <h1>LAST PRODUCTS ADDED THIS WEEK</h1>
+        </div>
+      )}
 
       <div className="shop-page">
         {productos.length === 0 ? (
