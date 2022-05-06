@@ -27,7 +27,6 @@ const Formulario = memo(() => {
     totalPrice,
     fundamentalDataProduct,
     setOrderPrice,
-    orderId,
     setOrderId,
   } = useContext(CarritoContext);
 
@@ -172,7 +171,7 @@ const Formulario = memo(() => {
               <div className="content-modal">
                 <h1 className="saludo">Hello there!</h1>
                 <h1 className="sub-saludo">to buy, please enter</h1>
-                <h1  className="sub-saludox">your information data</h1>
+                <h1 className="sub-saludox">your information data</h1>
               </div>
               <div className="form-container">
                 <form

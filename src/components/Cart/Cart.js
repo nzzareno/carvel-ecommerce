@@ -38,7 +38,7 @@ const Cart = () => {
   });
 
   return (
-    <div className={addToCarrito.length > 0 ? 'cart-wrapx' : 'cart-wrap'} >
+    <div className={addToCarrito.length > 0 ? "cart-wrapx" : "cart-wrap"}>
       {addToCarrito.length > 0 ? (
         addToCarrito.map((producto) => {
           return (
@@ -54,7 +54,6 @@ const Cart = () => {
                 animate="visible"
                 variants={variants}
                 className="container"
-              
               >
                 <motion.section
                   initial="hidden"
@@ -154,7 +153,6 @@ const Cart = () => {
               fontSize: "35px",
               marginTop: "30px",
               color: "#ccc",
-             
             }}
           >
             .

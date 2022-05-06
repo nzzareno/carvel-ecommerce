@@ -9,8 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Checkout from "./components/Checkout/Checkout";
 import Formulario from "./components/Formulario/Formulario";
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navbar/Navigation";
-import { ReactSmartScroller } from "react-smart-scroller";
+ 
 
 function App() {
   return (
