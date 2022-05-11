@@ -2,26 +2,31 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+ 
 }
 
 .item__detail .item__detail-single-img img {
   width: 100%;
   background-color: #ffffff;
   object-fit: contain;
-  height: 70%;
+  height: 64%;
   margin-top: 111px;
+
 }
 
 .item__detail .item__detail-single-img {
   width: 52.19%;
-  min-height: 100vh;
+  min-height: 100vh !important;
   margin-right: 7px;
-  margin-top: 80px;
+  margin-top: 53px;
+  padding-right: 14px;
+  
 }
 
 .item__detail .item__detail-single-pro-details {
   width: 33%;
-  margin-top: 80px;
+  margin-top: 52px;
+  margin-left: -3px;
 }
 .item__detail .item__detail-single-pro-details h1 {
   font-size: 1.4rem;
@@ -262,8 +267,10 @@ a-button {
 
 .container-vertical {
   border: 1px solid #ddd;
+  border-width: 1px 0 1px 1px;
   flex: auto;
-  margin-top: 70px;
+  margin-top: 54px;
+ 
   text-align: center;
   display: flex;
   justify-content: flex-start;
@@ -328,12 +335,12 @@ a-button {
 
 .small-color {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 20px !important;
 }
 
 .color-container {
-  margin: 20px 0;
+  margin: 2px 0;
 }
 
 .ubicacion {
@@ -540,8 +547,7 @@ a-button {
 @media screen and(max-width: 909px) {
   .item__detail .item__detail-single-pro-details {
     width: 100%;
-    margin-left: -42px;
-    margin-right: 22px;
+ 
   }
 
   .item__detail .item__detail-single-pro-details h1 {
@@ -560,17 +566,17 @@ a-button {
   }
 
   .item__detail .item__detail-single-img img {
-    width: 330%;
+    width: 360%;
 
     background-color: #ffffff;
     object-fit: contain;
-    height: 100%;
+ 
     padding-right: 49px;
     padding-left: 49px;
   }
 
   .item__detail .item__detail-single-img {
-    width: 21%;
+    width: 22%;
     min-height: 100vh;
     margin-left: -33px;
   }
@@ -610,7 +616,7 @@ $colors: (
 );
 
 .ItemDetail-container {
-  min-height: 100vh;
+  min-height: 100vh !important;
 }
 
 @each $button, $color in $colors {

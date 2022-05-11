@@ -1,10 +1,12 @@
 import "./Navigation.scss";
 import { NavLink, Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CarritoContext } from "../../context/CartContext";
 
 const Navigation = () => {
   const [isActive, setActive] = useState(true);
+  let { setFooterOff } = useContext(CarritoContext);
 
   const handleToggle = () => {
     setActive(true);
@@ -22,6 +24,7 @@ const Navigation = () => {
             to="/carvel-ecommerce"
             className="logo-text"
             style={{ textDecoration: "none" }}
+            onClick={() => setFooterOff(false)}
           >
             Carvel
           </Link>

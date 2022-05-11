@@ -1,6 +1,7 @@
 import { useContext, useState, memo } from "react";
 import { CarritoContext } from "../../context/CartContext";
 import "./Formulario.scss";
+import { motion } from "framer-motion";
 import { db } from "../../index";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -90,11 +91,10 @@ const Formulario = memo(() => {
       });
 
       await runTransaction(db, async (transaction) => {
-        const batch = writeBatch(db);
         orderProducts.forEach(async (product) => {
           const check = await transaction.get(product.doc);
           const incomingStock = check.data().stock - product.quantity;
-
+          const batch = writeBatch(db);
           if (
             !formik.values.firstName.trim() ||
             !formik.values.lastName.trim() ||
@@ -125,7 +125,6 @@ const Formulario = memo(() => {
 
       if (!errorHelp)
         return await addDoc(orderRef, buyer).then((rta) => {
-          alertify.success("Order created successfully");
           setOrderId(rta.id);
           setOrderPrice(buyer.total);
           setOpenModal(false);
@@ -137,12 +136,24 @@ const Formulario = memo(() => {
     }
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   if (!openModal) {
     return null;
   }
 
   return (
-    <div className="main">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 1.4 }}
+      className="main"
+      style={{ zIndex: 9 }}
+    >
       {openModal ? (
         <div onClick={() => setOpenModal(!openModal)} className="overlay">
           <div
@@ -267,7 +278,7 @@ const Formulario = memo(() => {
                       type="number"
                       id="phone"
                       name="phone"
-                      placeholder="Phone Number"
+                      placeholder="Phone"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.phone}
@@ -294,7 +305,9 @@ const Formulario = memo(() => {
                     </button>
                     <button
                       type="submit"
-                      onClick={formik.handleSubmit}
+                      onClick={() => {
+                        formik.handleSubmit();
+                      }}
                       className="btnPrimary"
                     >
                       <span className="bold">BUY NOW</span>
@@ -311,7 +324,7 @@ const Formulario = memo(() => {
           back to home and select what you like best!
         </h1>
       )}
-    </div>
+    </motion.div>
   );
 });
 

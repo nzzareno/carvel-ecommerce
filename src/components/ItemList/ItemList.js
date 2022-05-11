@@ -8,6 +8,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../index";
 import { motion } from "framer-motion";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
+ 
 
 const ItemList = () => {
   const [productos, setProductos] = useState([]);
@@ -131,6 +132,9 @@ const ItemList = () => {
           animate="visible"
           variants={variants}
           transition={{ duration: 5 }}
+          style={{
+            overflowX: "hidden",
+          }}
         >
           <h1 className="title-collection">
             <CollectionTitle productos={productos} />
@@ -170,9 +174,15 @@ const ItemList = () => {
       }
 
       {!id && (
-        <div className="Added">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 5 }}
+          className="Added"
+        >
           <h1>LAST PRODUCTS ADDED THIS WEEK</h1>
-        </div>
+        </motion.div>
       )}
 
       <div className="shop-page">

@@ -1,5 +1,5 @@
 .checkout-container {
-  min-height: 88vh;
+  min-height: 97.7vh;
   background-color: crimson;
   z-index: 999;
 }
@@ -84,4 +84,12 @@
   font-weight: 400;
   line-height: min(14px, 3.41vw);
   margin: 14px 0;
+}
+
+@media screen and (max-width: 580px) {
+  .checkout-container {
+    min-height: 97.7vh;
+    background-color: crimson;
+    z-index: 999;
+  }
 }

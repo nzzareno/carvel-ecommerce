@@ -9,7 +9,6 @@ import Footer from "./components/Footer/Footer";
 import Checkout from "./components/Checkout/Checkout";
 import Formulario from "./components/Formulario/Formulario";
 import { Routes, Route } from "react-router-dom";
- 
 
 function App() {
   return (
@@ -31,7 +30,7 @@ function App() {
           />
           <Route path="*" element={<NotFound404 />} />
         </Routes>
-        <Footer />
+       <Footer /> 
       </div>
     </>
   );

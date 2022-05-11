@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCount.scss";
+import * as alertify from "alertifyjs";
+import "alertifyjs/build/css/alertify.css";
 
 const ItemCount = ({ stock, initial, onAdd, branded }) => {
   const [item, setItem] = useState(initial);
@@ -29,6 +31,15 @@ const ItemCount = ({ stock, initial, onAdd, branded }) => {
       setStockState(stockState + 1);
     }
   }
+
+  const handleClickAdd = () => {
+    // item validation
+    if (item === 0) {
+      alertify.error("Please select a quantity for the product");
+    } else {
+      alertify.success("Added to cart");
+    }
+  };
 
   return (
     <div>
@@ -74,7 +85,9 @@ const ItemCount = ({ stock, initial, onAdd, branded }) => {
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
-          <span className="button-text">Add to cart</span>
+          <span onClick={() => handleClickAdd()} className="button-text">
+            Add to cart
+          </span>
         </button>
       </div>
     </div>

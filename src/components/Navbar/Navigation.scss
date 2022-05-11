@@ -13,8 +13,7 @@
 
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
+ 
 }
 .menu-icon:checked + label,
 .menu-icon:not(:checked) + label {
@@ -192,6 +191,7 @@
   color: #000000;
 }
 .nav ul li a:hover {
+  text-shadow: 0px 0px 0px  black;
   color: #ffeba7;
 }
 .nav ul li a:after {
@@ -240,7 +240,7 @@
   }
 
   .nav ul li a {
-    font-size: 5vh;
+    font-size: 4.7vh;
   }
 
   .nav ul {

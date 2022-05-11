@@ -15,10 +15,9 @@ const Cart = () => {
   let { addToCarrito } = useContext(CarritoContext);
   let { clear } = useContext(CarritoContext);
   let { removeItem } = useContext(CarritoContext);
-
   let { setOpenModal } = useContext(CarritoContext);
+  let { setFooterOff } = useContext(CarritoContext);
   let { totalPrice } = useContext(CarritoContext);
-
   let navigate = useNavigate();
 
   const variants = {
@@ -260,6 +259,7 @@ const Cart = () => {
                   onClick={() => {
                     navigate("/carvel-ecommerce/cart/form");
                     setOpenModal(true);
+                    setFooterOff(true);
                   }}
                   className="btn"
                 >

@@ -28,14 +28,14 @@ const ItemAside = ({ producto }) => {
             <h3>${producto.price}</h3>
           </div>
           <div>
-            <p>and FREE Returns</p>
+            <p>and <strong>FREE</strong> Returns</p>
           </div>
           <div>
             <p>
               Delivery for <strong>$39.99</strong>
             </p>
             <p>
-              between <strong>17 - 30 April</strong>
+              between <strong>18 - 31 May</strong>
             </p>
           </div>
           <div>

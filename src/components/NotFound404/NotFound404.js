@@ -16,7 +16,7 @@ const NotFound404 = () => {
           <br />
           were looking for.
         </p>
-        <Link style={{ textDecoration: "none" }} to="/">
+        <Link style={{ textDecoration: "none" }} to="/carvel-ecommerce">
           <h5>Go to home</h5>
         </Link>
       </div>

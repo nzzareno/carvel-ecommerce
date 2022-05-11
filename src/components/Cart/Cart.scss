@@ -307,7 +307,7 @@
   font-size: 33px;
   font-weight: 900;
   padding: 14px 0;
-  width: 290px;
+  width: 391px;
   text-transform: uppercase;
   font-family: "Roboto";
   text-align: center;
@@ -318,7 +318,7 @@
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-
+ 
   &:hover {
     color: #f6ff00;
     background: #222;
@@ -349,7 +349,7 @@
     text-shadow: 1px 0px 1px black;
     font-size: 14px;
     font-weight: 700 !important;
-    margin: 1% 0 14px 0;
+    margin: 1% 7px 14px 0;
   }
 
   .product {
@@ -367,8 +367,8 @@
   }
 
   .right {
-    margin: 42px auto;
-    margin-right: 101px;
+    margin: 42px 0;
+    margin-right: 17px;
   }
 
   .product footer .price {
@@ -416,7 +416,7 @@
 
 .final-price {
   color: #000000;
-  margin-right: -5px;
+  
 }
 
 .iconpower {

@@ -3,13 +3,23 @@ import { CarritoContext } from "../../context/CartContext";
 import { ReactComponent as Like } from "../../assets/checklike.svg";
 import { ReactComponent as Unlike } from "../../assets/unlike.svg";
 import "./Checkout.scss";
+import { motion } from "framer-motion";
 const Checkout = () => {
   let { orderId, orderPrice } = useContext(CarritoContext);
-
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   return (
     <>
       {orderId ? (
-        <div className="checkout-container">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 1 }}
+          className="checkout-container"
+        >
           <section
             className="purchase-confirmation page-selector"
             id="purchase-confirmation"
@@ -36,9 +46,15 @@ const Checkout = () => {
               please keep an eye out for them.
             </p>
           </section>
-        </div>
+        </motion.div>
       ) : (
-        <div className="checkout-container">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 1 }}
+          className="checkout-container"
+        >
           <section
             className="purchase-confirmation page-selector"
             id="purchase-confirmation"
@@ -54,7 +70,7 @@ const Checkout = () => {
               Your payment could not be processed
             </h2>
           </section>
-        </div>
+        </motion.div>
       )}
     </>
   );
