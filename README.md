@@ -1,7 +1,11 @@
 # CARVEL ECOMMERCE CLOTHES
+
 ## Introduction
-#### This is a project that i have done in the Coderhouse React.js course in which the objective is to make a ecommerce using hooks, context API, props and Firebase 9
+
+#### This is a project that i have done for the Coderhouse React.js course in which the objective is to make a ecommerce using hooks, context API, and Firebase 9
+
 ## Development technologies
+
 <ul>
 <li>React
     <li>Sass
@@ -21,5 +25,4 @@
  ## Preview
  
  
-                         ![gifcarvel (3)](https://user-images.githubusercontent.com/91240448/168525192-4f489855-e709-4151-8d56-b036c83c2361.gif)
- 
+![gifcarvel (3)](https://user-images.githubusercontent.com/91240448/168525192-4f489855-e709-4151-8d56-b036c83c2361.gif)
