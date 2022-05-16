@@ -28,6 +28,7 @@ const Navigation = () => {
           >
             Carvel
           </Link>
+
           <CartWidget style={{ position: "absolute", right: "200px" }} />
         </div>
       </div>

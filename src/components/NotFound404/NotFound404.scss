@@ -65,7 +65,7 @@ $booFaceColor: #9b9b9b;
   height: 100vh;
   text-align: center;
   font-size: $jaggedDistance / 2;
-  
+  z-index: 999;
   h1 {
     font-size: $jaggedDistance;
     margin-top: $jaggedDistance;

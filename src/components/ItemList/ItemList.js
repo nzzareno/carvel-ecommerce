@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Item from "../Item/Item";
 import CollectionTitle from "../CollectionTitle/CollectionTitle";
 import "./ItemList.scss";
@@ -19,7 +19,8 @@ const ItemList = () => {
   const [womensImage, setWomensImage] = useState("");
   const [yellowpast, setYellowpast] = useState("");
   const { id } = useParams();
-
+ 
+  // let {themeBase} = useContext(ThemeContext);
   // STORAGE IMAGES FOR COLLECTIONS
 
   const storage = getStorage();
@@ -150,7 +151,7 @@ const ItemList = () => {
 
           {!id && (
             <>
-              <div style={{ background: "black" }} id="rotate-words">
+              <div id="rotate-words">
                 <div>
                   NEW ARRIVALS
                   <p>for you</p>
@@ -180,6 +181,7 @@ const ItemList = () => {
           variants={variants}
           transition={{ duration: 5 }}
           className="Added"
+    
         >
           <h1>LAST PRODUCTS ADDED THIS WEEK</h1>
         </motion.div>

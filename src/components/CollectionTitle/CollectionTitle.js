@@ -9,8 +9,15 @@ function CollectionTitle({ productos }) {
         .filter((item, index) => index === 0)
         .map((item, index) => (
           <div key={index}>
-            <h3 className="collection-title" key={index}>
-              {item.chosen ? "Carvel" : item.category} Collections: <br />{" "}
+            <h3
+              className={item.chosen ? "collection-title" : "collection-title"}
+              key={index}
+              style={{
+                marginTop: item.chosen ? "70px" : "0px",
+                marginLeft: item.chosen ? "-29.7px" : "0px",
+              }}
+            >
+              {item.chosen ? "Carvel" : item.category} Collections: <br />
               Comfortably feel of <br /> the 
               <span style={{ color: "#fff", textShadow: "none" }}>
                 <Typical

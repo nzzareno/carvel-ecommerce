@@ -6,10 +6,6 @@ import { BsTrash } from "react-icons/bs";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
-import { ReactComponent as Womens } from "../../assets/women-coat-svgrepo-com.svg";
-import { ReactComponent as Hats } from "../../assets/accesory-hats-svgrepo-com.svg";
-import { ReactComponent as Glasses } from "../../assets/glasses-svgrepo-com.svg";
-import { ReactComponent as Jackets } from "../../assets/jacket-svgrepo-com.svg";
 
 const Cart = () => {
   let { addToCarrito } = useContext(CarritoContext);
@@ -36,214 +32,119 @@ const Cart = () => {
     );
   });
 
+  function goToHome() {
+    navigate("/carvel-ecommerce/");
+  }
+
   return (
     <div className={addToCarrito.length > 0 ? "cart-wrapx" : "cart-wrap"}>
-      {addToCarrito.length > 0 ? (
-        addToCarrito.map((producto) => {
-          return (
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              key={uuidv4()}
-              style={{ minHeight: "100%" }}
-            >
+      {addToCarrito.length > 0
+        ? addToCarrito.map((producto) => {
+            return (
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                className="container"
+                key={uuidv4()}
+                style={{ minHeight: "100%" }}
               >
-                <motion.section
+                <motion.div
                   initial="hidden"
                   animate="visible"
                   variants={variants}
-                  id="cart"
+                  className="container"
                 >
-                  <motion.article
+                  <motion.section
                     initial="hidden"
                     animate="visible"
                     variants={variants}
-                    className="product"
+                    id="cart"
                   >
-                    <header>
-                      <img
-                        src={producto.item.imageUrl}
-                        alt=""
-                        style={{
-                          backgroundColor: "white",
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "contain",
-                        }}
-                      />
-                    </header>
-
-                    <div className="content">
-                      <h1>
-                        {producto.item.name}
-                        <BsTrash
-                          onClick={() => removeItem(producto.item.id)}
-                          className="basurita"
+                    <motion.article
+                      initial="hidden"
+                      animate="visible"
+                      variants={variants}
+                      className="product"
+                    >
+                      <header>
+                        <img
+                          src={producto.item.imageUrl}
+                          alt=""
+                          style={{
+                            backgroundColor: "white",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "contain",
+                          }}
                         />
-                      </h1>
-                      {producto.item.category} | {producto.item.color}
-                      <h5 style={{ marginTop: "10px" }}>
-                        <span>
-                          <small className="initial-price">
-                            <span
-                              style={{
-                                backgroundColor: "#00640a",
-                                height: "120px",
-                              }}
-                            >
-                                   
-                            </span>{" "}
-                            Initial price{" "}
-                          </small>
-                        </span>
-                      </h5>
-                      <h5>
-                        <span style={{ marginTop: "55px" }}>
-                          <small className="final-price">
-                            <span
-                              style={{
-                                height: "120px",
-                                backgroundColor: "yellow",
-                              }}
-                            >
-                                 
-                            </span>
-                            <span
-                              style={{
-                                height: "120px",
-                                backgroundColor: "black",
-                              }}
-                            >
-                                 
-                            </span>{" "}
-                            Final price{" "}
-                          </small>
-                        </span>
-                      </h5>
-                    </div>
+                      </header>
 
-                    <footer className="content">
-                      <span className="qt">
-                        <strong>Quantity: </strong> {producto.quantity}
-                      </span>
+                      <div className="content">
+                        <h1>
+                          {producto.item.name}
+                          <BsTrash
+                            onClick={() => removeItem(producto.item.id)}
+                            className="basurita"
+                          />
+                        </h1>
+                        {producto.item.category} | {producto.item.color}
+                        <h5 style={{ marginTop: "10px" }}>
+                          <span>
+                            <small className="initial-price">
+                              <span
+                                style={{
+                                  backgroundColor: "#00640a",
+                                  height: "120px",
+                                }}
+                              >
+                                     
+                              </span>{" "}
+                              Initial price{" "}
+                            </small>
+                          </span>
+                        </h5>
+                        <h5>
+                          <span style={{ marginTop: "55px" }}>
+                            <small className="final-price">
+                              <span
+                                style={{
+                                  height: "120px",
+                                  backgroundColor: "yellow",
+                                }}
+                              >
+                                   
+                              </span>
+                              <span
+                                style={{
+                                  height: "120px",
+                                  backgroundColor: "black",
+                                }}
+                              >
+                                   
+                              </span>{" "}
+                              Final price{" "}
+                            </small>
+                          </span>
+                        </h5>
+                      </div>
 
-                      <h2 className="full-price">
-                        ${producto.item.price * producto.quantity}
-                      </h2>
-                      <h2 className="price">${producto.item.price}</h2>
-                    </footer>
-                  </motion.article>
-                </motion.section>
+                      <footer className="content">
+                        <span className="qt">
+                          <strong>Quantity: </strong> {producto.quantity}
+                        </span>
+
+                        <h2 className="full-price">
+                          ${producto.item.price * producto.quantity}
+                        </h2>
+                        <h2 className="price">${producto.item.price}</h2>
+                      </footer>
+                    </motion.article>
+                  </motion.section>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          );
-        })
-      ) : (
-        <>
-          <h1
-            style={{
-              textAlign: "center",
-              fontSize: "35px",
-              marginTop: "30px",
-              color: "#ccc",
-            }}
-          >
-            .
-          </h1>
-
-          <div
-            style={{
-              display: "flex",
-              textDecoration: "none",
-              flexDirection: "column",
-              alignItems: "center",
-              backgroundColor: "#333",
-            }}
-          >
-            <h1
-              style={{
-                color: "white",
-                borderBottom: "1px solid #ccc",
-                textAlign: "center",
-                fontSize: "45px",
-                width: "100%",
-              }}
-            >
-              The cart is empty... Start enjoying our products and visit us
-              again
-            </h1>
-            <Link
-              to={"/carvel-ecommerce/category/Glasses"}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                textDecoration: "none",
-              }}
-            >
-              <span>Glasses</span>{" "}
-              <span>
-                <Glasses className="iconpower" />
-              </span>
-            </Link>
-            <Link
-              to={"/carvel-ecommerce/category/Hats"}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                textDecoration: "none",
-              }}
-            >
-              <span>Hats</span>{" "}
-              <span>
-                <Hats className="iconpower" />
-              </span>
-            </Link>
-            <Link
-              to={"/carvel-ecommerce/category/Jackets"}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                textDecoration: "none",
-              }}
-            >
-              <span>Jackets</span>{" "}
-              <span>
-                <Jackets className="iconpower" />
-              </span>
-            </Link>
-            <Link
-              to={"/carvel-ecommerce/category/Womens"}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                textDecoration: "none",
-              }}
-            >
-              <span>Womens</span>{" "}
-              <span>
-                <Womens className="iconpower" />
-              </span>
-            </Link>
-            <Link to={`/carvel-ecommerce`} className="button-backhome">
-              <span>Go back to home</span>
-            </Link>
-          </div>
-        </>
-      )}
+            );
+          })
+        : goToHome()}
 
       {addToCarrito.length > 0 ? (
         <>
