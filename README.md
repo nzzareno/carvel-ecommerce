@@ -2,7 +2,7 @@
 
 ## Introduction
 
-#### This is a project that i have done for the Coderhouse React.js course in which the objective is to make a ecommerce using hooks, context API, and Firebase 9
+#### This is a project that i have done in the Coderhouse React.js course in which the objective is to make a ecommerce using hooks, context API, props and Firebase 9
 
 ## Development technologies
 
@@ -15,9 +15,9 @@
  
 ## Tools
  [Formik](https://formik.org/) (for more precise use of handlers) <br/>
- [Yup](https://www.npmjs.com/package/yup) (a correct and precise handling in form validations)
+ [Yup](https://www.npmjs.com/package/yup) (a correct and precise handling in form validations)  <br/>
  [Material-ui](https://mui.com/) (spinner) <br/>
- [Alertifyjs](https://alertifyjs.com/) (notifications)
+ [Alertifyjs](https://alertifyjs.com/) (notifications)  <br/>
  [React-icons](https://formik.org/) (for more precise use of handlers) <br/>
  [Framer-Motion](https://www.framer.com/motion/) (for transition in pages)
  
