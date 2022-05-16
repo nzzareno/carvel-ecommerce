@@ -38,12 +38,13 @@ const Checkout = () => {
             </p>
             <h3>What happens next?</h3>
             <p className="p-checkout">
-              For your peace of mind, we will send you a confirmation email, so
-              you know you’re covered from your renewal date.
+              For your peace of mind, we will garantize to you a good send, so
+              you know you’are in good hands from your buy date to the date of
+              the coming.
             </p>
             <p className="p-checkout">
-              A further email with your policy documents will follow shortly so
-              please keep an eye out for them.
+              If you have additional charges attached, do not hesitate to
+              contact us.
             </p>
           </section>
         </motion.div>
