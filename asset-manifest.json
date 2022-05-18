@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/carvel-ecommerce/static/css/main.2e95cd2e.css",
-    "main.js": "/carvel-ecommerce/static/js/main.038df1d4.js",
+    "main.css": "/carvel-ecommerce/static/css/main.f343709e.css",
+    "main.js": "/carvel-ecommerce/static/js/main.383601e8.js",
     "static/media/FontsFree-Net-Billabong.ttf": "/carvel-ecommerce/static/media/FontsFree-Net-Billabong.0e94b13a1cfb505ff271.ttf",
     "static/media/shopping-bag.svg": "/carvel-ecommerce/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
     "static/media/unlike.svg": "/carvel-ecommerce/static/media/unlike.0d2de98174f3015268475f490c9edd81.svg",
     "index.html": "/carvel-ecommerce/index.html",
     "static/media/checklike.svg": "/carvel-ecommerce/static/media/checklike.d58a6b6facac2b8f24194a2b6578cb62.svg",
-    "main.2e95cd2e.css.map": "/carvel-ecommerce/static/css/main.2e95cd2e.css.map",
-    "main.038df1d4.js.map": "/carvel-ecommerce/static/js/main.038df1d4.js.map"
+    "main.f343709e.css.map": "/carvel-ecommerce/static/css/main.f343709e.css.map",
+    "main.383601e8.js.map": "/carvel-ecommerce/static/js/main.383601e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e95cd2e.css",
-    "static/js/main.038df1d4.js"
+    "static/css/main.f343709e.css",
+    "static/js/main.383601e8.js"
   ]
 }
