@@ -13,7 +13,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="App" >
+      <div className="App">
         <Navbar />
         <Routes>
           <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
@@ -30,7 +30,7 @@ function App() {
           />
           <Route path="*" element={<NotFound404 />} />
         </Routes>
-        <Footer />
+        <Footer/>
       </div>
     </>
   );
