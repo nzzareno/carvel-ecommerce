@@ -171,6 +171,7 @@
   height: 140px;
   padding: 0 2px;
   width: 75%;
+  text-align: center;
   margin-top: 52px;
 }
 
@@ -183,7 +184,7 @@
 
 .product footer.content {
   height: 50px;
-
+  
   padding: 0;
 }
 
@@ -421,6 +422,11 @@
   width: 50px;
 
   margin: 7px 0 0 4px;
+}
+
+small {
+ 
+  font-weight: 900;
 }
 
 .button-backhome {

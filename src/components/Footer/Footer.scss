@@ -18,6 +18,7 @@
 .footer-container {
   width: 100%;
   z-index: -1;
+  
 }
 
 .footer-links-titles {
@@ -34,6 +35,7 @@
 
 .footer-links-titles:hover {
   color: papayawhip;
+  
 }
 
 .footer-footer .social-icon,
@@ -42,11 +44,13 @@ footer .menux {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .footer-footer .social-icon li,
 footer .menux li {
   list-style: none;
+  cursor: pointer;
 }
 
 .footer-footer .social-icon li .social-links,
@@ -56,6 +60,7 @@ footer .menux li {
   transition: 0.5s;
   margin: 0 10px;
   color: #fff;
+  cursor: pointer;
 }
 
 .footer-footer .social-icon li .social-links:hover {
@@ -107,7 +112,7 @@ footer .menux li {
     color: rgb(188, 188, 188);
     text-decoration: none;
     font-size: 1em;
-
+    cursor: pointer;
     -webkit-transition: color 0.2s linear;
     -moz-transition: color 0.2s linear;
     -ms-transition: color 0.2s linear;
@@ -117,8 +122,8 @@ footer .menux li {
 
   .footer-footer p {
     font-size: 1.06em;
+    cursor: pointer;
   }
 }
 
-@media screen and (max-width: 499px) {
-}
+ 
