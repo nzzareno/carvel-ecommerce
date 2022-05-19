@@ -18,8 +18,8 @@
  [Yup](https://www.npmjs.com/package/yup) (a correct and precise handling in form validations)  <br/>
  [Material-ui](https://mui.com/) (spinner) <br/>
  [Alertifyjs](https://alertifyjs.com/) (notifications)  <br/>
- [React-icons](https://formik.org/) (for more precise use of handlers) <br/>
- [Framer-Motion](https://www.framer.com/motion/) (for transition in pages)
+ [React-icons](https://www.npmjs.com/package/react-icons/) (popular and cool icons) <br/>
+ [Framer-Motion](https://www.framer.com/motion/) (for transition between pages)
  <h2>Required npm tool installations:</h2>
  <ul><li>npm install formik --save</li>
  <li>npm install yup</li>
