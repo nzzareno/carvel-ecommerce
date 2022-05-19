@@ -8,7 +8,6 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../index";
 import { motion } from "framer-motion";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
- 
 
 const ItemList = () => {
   const [productos, setProductos] = useState([]);
@@ -19,7 +18,7 @@ const ItemList = () => {
   const [womensImage, setWomensImage] = useState("");
   const [yellowpast, setYellowpast] = useState("");
   const { id } = useParams();
- 
+
   // let {themeBase} = useContext(ThemeContext);
   // STORAGE IMAGES FOR COLLECTIONS
 
@@ -181,7 +180,6 @@ const ItemList = () => {
           variants={variants}
           transition={{ duration: 5 }}
           className="Added"
-    
         >
           <h1>LAST PRODUCTS ADDED THIS WEEK</h1>
         </motion.div>

@@ -24,11 +24,9 @@ export const db = getFirestore(app);
 ReactDOM.render(
   <React.StrictMode>
     <CartContext>
-   
       <Router>
         <App />
       </Router>
- 
     </CartContext>
   </React.StrictMode>,
   document.getElementById("root")

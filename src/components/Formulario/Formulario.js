@@ -31,7 +31,6 @@ const Formulario = memo(() => {
     setOrderId,
     setFooterOff,
   } = useContext(CarritoContext);
-  
 
   const formik = useFormik({
     initialValues: {
@@ -303,7 +302,12 @@ const Formulario = memo(() => {
                       }}
                       className="btnOutline"
                     >
-                      <span    onClick={() => setFooterOff(false)} className="bold">CANCEL</span>
+                      <span
+                        onClick={() => setFooterOff(false)}
+                        className="bold"
+                      >
+                        CANCEL
+                      </span>
                     </button>
                     <button
                       type="submit"

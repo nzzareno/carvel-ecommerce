@@ -18,19 +18,13 @@ function App() {
         <Routes>
           <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
           <Route path="/carvel-ecommerce/category/:id" element={<ItemList />} />
-          <Route
-            path="/carvel-ecommerce/item/:id"
-            element={<ItemDetailContainer />}
-          />
+          <Route path="/carvel-ecommerce/item/:id" element={<ItemDetailContainer />} />
           <Route path="/carvel-ecommerce/cart" element={<Cart />} />
           <Route path="/carvel-ecommerce/cart/form" element={<Formulario />} />
-          <Route
-            path="/carvel-ecommerce/cart/checkout"
-            element={<Checkout />}
-          />
+          <Route path="/carvel-ecommerce/cart/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound404 />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

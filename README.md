@@ -1,5 +1,3 @@
-# CARVEL ECOMMERCE CLOTHES
-
 ## Introduction
 
 #### This is a project that i have done in the Coderhouse React.js course in which the objective is to make a ecommerce using hooks, context API, props and Firebase 9
@@ -20,6 +18,16 @@
  [Alertifyjs](https://alertifyjs.com/) (notifications)  <br/>
  [React-icons](https://formik.org/) (for more precise use of handlers) <br/>
  [Framer-Motion](https://www.framer.com/motion/) (for transition in pages)
+ <h2>Required npm tool installations:</h2>
+ <ul><li>npm install formik --save</li>
+ <li>npm install yup</li>
+ <li>npm install @material-ui/core</li>
+ <li>npm install alertifyjs</li>
+ <li>npm install react-icons</li>
+ <li>npm install framer-motion</li>
+ 
+ </ul>
+ 
  
  
  ## Preview

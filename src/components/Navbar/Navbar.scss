@@ -10,12 +10,11 @@
 nav {
   padding: 17px 7px;
   background: #fff;
-
+  z-index: 9999 ;
   font-family: "Roboto", sans-serif;
   width: 100%;
   font-weight: lighter;
 
-  z-index: 999;
   .nav__container {
     display: flex;
 

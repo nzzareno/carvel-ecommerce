@@ -13,7 +13,6 @@
 
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
- 
 }
 .menu-icon:checked + label,
 .menu-icon:not(:checked) + label {
@@ -26,7 +25,7 @@
   padding: 0;
   margin: 0;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
 }
 .menu-icon:checked + label:before,
 .menu-icon:not(:checked) + label:before {
@@ -191,7 +190,7 @@
   color: #000000;
 }
 .nav ul li a:hover {
-  text-shadow: 0px 0px 0px  black;
+  text-shadow: 0px 0px 0px black;
   color: #ffeba7;
 }
 .nav ul li a:after {
@@ -267,7 +266,7 @@
   background-color: rgb(255, 255, 255);
   padding: 14px 7px;
   width: 100%;
-  z-index: 9;
+  z-index: 9992;
 
   ul,
   .nav_menu {

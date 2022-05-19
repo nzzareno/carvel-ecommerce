@@ -13,8 +13,8 @@ function CollectionTitle({ productos }) {
               className={item.chosen ? "collection-title" : "collection-title"}
               key={index}
               style={{
-                marginTop: item.chosen ? "70px" : "0px",
-                marginLeft: item.chosen ? "-29.7px" : "0px",
+                marginTop: item.chosen ? "128px" : "0px",
+                marginLeft: item.chosen ? "-25px" : "0px",
               }}
             >
               {item.chosen ? "Carvel" : item.category} Collections: <br />

@@ -1,10 +1,9 @@
-import React  from "react";
+import React from "react";
 import "./Item.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
- 
+
 const Item = ({ id, name, imageUrl, price }) => {
- 
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -17,7 +16,6 @@ const Item = ({ id, name, imageUrl, price }) => {
         variants={variants}
         transition={{ duration: 3 }}
         className="page-content"
-   
       >
         <motion.div
           initial="hidden"

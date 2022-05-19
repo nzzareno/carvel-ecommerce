@@ -1,23 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./ItemCount.scss";
 import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
-import {
-  addDoc,
-  collection,
-  serverTimestamp,
-  writeBatch,
-  doc,
-  runTransaction,
-} from "firebase/firestore";
-import { db } from "../../index";
-import { CarritoContext } from "../../context/CartContext";
 
 const ItemCount = ({ stock, initial, onAdd, branded }) => {
   const [item, setItem] = useState(initial);
   const [stockState, setStockState] = useState(stock);
-  let { addToCarrito } = useContext(CarritoContext);
-  let { setAddToCarrito } = useContext(CarritoContext);
+
   function handlerChange(e) {
     setItem(() => e.target.value);
     setStockState(() => e.target.value);
@@ -50,11 +39,6 @@ const ItemCount = ({ stock, initial, onAdd, branded }) => {
       alertify.success("Added to cart");
     }
   }
-
-   
-  
-
-
 
   return (
     <div>
@@ -100,10 +84,7 @@ const ItemCount = ({ stock, initial, onAdd, branded }) => {
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
-          <span
-            onClick={() => handleClickAdd()}
-            className="button-text"
-          >
+          <span onClick={() => handleClickAdd()} className="button-text">
             Add to cart
           </span>
         </button>
