@@ -32,9 +32,9 @@ const ItemDetail = ({ producto }) => {
       <div className="item__detail-single-pro-details">
         <h5>
           Brand:{" "}
-          <a style={{ textDecoration: "none" }} href={producto.page}>
+          <Link style={{ textDecoration: "none" }} to={producto.page}>
             {producto.brand}
-          </a>
+          </Link>
         </h5>
         <div className="title-container">
           <h2>{producto.name} </h2>

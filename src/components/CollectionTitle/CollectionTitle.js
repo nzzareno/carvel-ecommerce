@@ -10,7 +10,7 @@ function CollectionTitle({ productos }) {
         .map((item, index) => (
           <div key={index}>
             <h3
-              className={item.chosen ? "collection-title" : "collection-title"}
+              className={item.chosen && "collection-title"}
               key={index}
               style={{
                 marginTop: item.chosen ? "128px" : "0px",

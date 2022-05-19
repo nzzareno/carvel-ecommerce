@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  overflow-x: hidden !important;
 }
 
 .directory-menu {
@@ -88,7 +87,7 @@
 .cartelera {
   z-index: 1;
   width: 100%;
-
+  font-weight: 900;
   background-color: rgb(0, 0, 0);
   text-align: center;
   font-size: 24px;
@@ -100,13 +99,13 @@
   border: 1px solid rgba(0, 0, 0, 0.088);
   right: 0;
   left: 0;
-  animation: move 2s;
-  -webkit-animation: move 3s;
+  animation: move 1.7s;
+  -webkit-animation: move 1.7s;
 }
 
 @media screen and (max-width: 735px) {
   .cartelera {
-    font-size: 16px;
+    font-size: 13.7px;
     top: 75px;
   }
 }

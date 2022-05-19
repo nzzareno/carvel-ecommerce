@@ -18,7 +18,7 @@ const ItemListContainer = () => {
         className="cartelerax"
       >
         <h5 className="cartelera">
-          YOU SHOULD TAKE ADVANTAGE OF OUR 50% OFF DEALS!
+          YOU SHOULD TAKE OUR 50% OFF DEALS!
         </h5>
       </motion.div>
       <ItemList />

@@ -11,9 +11,6 @@
   transform: translateY(-50%);
 }
 
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked) {
-}
 .menu-icon:checked + label,
 .menu-icon:not(:checked) + label {
   position: fixed;
@@ -34,7 +31,7 @@
   display: block;
   width: 30px;
   height: 20px;
-  z-index: 0;
+  z-index: 9999;
   top: 0;
   left: 0;
   border-top: 2px solid #4d4d4d;
@@ -154,6 +151,7 @@
   display: block;
   width: 100%;
   padding: 0;
+
   margin: 40px 0;
   text-align: center;
   list-style: none;
@@ -181,6 +179,7 @@
 .nav ul li a {
   font-family: "Montserrat", sans-serif;
   font-size: 9vh;
+  cursor: pointer;
   text-transform: uppercase;
   line-height: 1.2;
   font-weight: 800;

@@ -9,7 +9,8 @@ export default function CartContext({ children }) {
   const [orderName, setOrderName] = useState("");
   const [orderPrice, setOrderPrice] = useState("");
   const [footerOff, setFooterOff] = useState(false);
-
+  const [isActive, setActive] = useState(true);
+  
   async function addItem(item, quantity) {
     const foundProdIndex = addToCarrito.findIndex(
       (product) => product.item.id === item.id
@@ -69,6 +70,9 @@ export default function CartContext({ children }) {
           setOrderPrice,
           footerOff,
           setFooterOff,
+          isActive,
+          setActive
+       
         }}
       >
         {children}

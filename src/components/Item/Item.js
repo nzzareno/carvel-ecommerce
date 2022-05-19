@@ -29,12 +29,16 @@ const Item = ({ id, name, imageUrl, price }) => {
             <h2 className="titlex">{name}</h2>
             <h2 className="copyx">ONLY FOR ${price}</h2>
             <Link
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", cursor: "pointer" }}
               className="btnx"
               to={`/carvel-ecommerce/item/${id}`}
             >
               <span
-                style={{ textDecoration: "none", color: "white" }}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  cursor: "pointer",
+                }}
                 to={`/carvel-ecommerce/item/${id}`}
               >
                 SHOP NOW

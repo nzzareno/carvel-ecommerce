@@ -9,22 +9,26 @@ import Footer from "./components/Footer/Footer";
 import Checkout from "./components/Checkout/Checkout";
 import Formulario from "./components/Formulario/Formulario";
 import { Routes, Route } from "react-router-dom";
+import {CarritoContext} from "./context/CartContext";
+import { useContext } from "react";
 
 function App() {
+  let {footerOff} = useContext(CarritoContext);
+
   return (
     <>
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/carvel-ecommerce" element={<ItemListContainer />} />
-          <Route path="/carvel-ecommerce/category/:id" element={<ItemList />} />
+          <Route path="/carvel-ecommerce" element={<ItemListContainer />} />  
+          <Route path="/carvel-ecommerce/category/:id" element={<ItemList />} /> 
           <Route path="/carvel-ecommerce/item/:id" element={<ItemDetailContainer />} />
           <Route path="/carvel-ecommerce/cart" element={<Cart />} />
           <Route path="/carvel-ecommerce/cart/form" element={<Formulario />} />
           <Route path="/carvel-ecommerce/cart/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound404 />} />
         </Routes>
-        <Footer />
+       {!footerOff && <Footer />}   
       </div>
     </>
   );

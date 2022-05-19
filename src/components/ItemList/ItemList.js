@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Item from "../Item/Item";
 import CollectionTitle from "../CollectionTitle/CollectionTitle";
 import "./ItemList.scss";
@@ -19,7 +19,6 @@ const ItemList = () => {
   const [yellowpast, setYellowpast] = useState("");
   const { id } = useParams();
 
-  // let {themeBase} = useContext(ThemeContext);
   // STORAGE IMAGES FOR COLLECTIONS
 
   const storage = getStorage();

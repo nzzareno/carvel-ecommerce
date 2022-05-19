@@ -1,147 +1,68 @@
-$bgColor: #f7f7f7;
-$jaggedDistance: 32px;
-$booSize: $jaggedDistance * 5;
-$booBg: $bgColor;
-$booShadow: darken($booBg, 5%);
-$booFaceSize: round($jaggedDistance / 1.3333);
-$booFaceColor: #9b9b9b;
-
-
-@keyframes floating {
-  0% {
-    transform: translate3d(0, 0, 0);  
-  }
-  45% {
-    transform: translate3d(0, -10%, 0); 
-  }
-  55% {
-    transform: translate3d(0, -10%, 0); 
-  } 
-  100% {
-    transform: translate3d(0, 0, 0);
-  }     
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+* {
+  cursor: url("https://puu.sh/j1a8v/067742b89d.ico"), default;
 }
-
-@keyframes floatingShadow {
-  0% {
-    transform: scale(1);  
-  }
-  45% {
-    transform: scale(.85);  
-  }
-  55% {
-    transform: scale(.85);  
-  } 
-  100% {
-    transform: scale(1);
-  }     
-}
- 
-@mixin border-bottom-jagged($size, $color-outer) {
-  position: relative;
-  padding-bottom: $size; 
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-      z-index: 999;
-    left: -($size / 1.7);
-    bottom: -($jaggedDistance / 3.85);
-    width: calc(100% + #{$size});
-    height: $size;
-    background-repeat: repeat-x;
-    background-size: $size $size;
-    background-position: left bottom;
-    background-image: linear-gradient(-45deg, $color-outer ($size / 2), transparent 0),
-                      linear-gradient(45deg, $color-outer ($size / 2), transparent 0),
-                      linear-gradient(-45deg, $booFaceColor ($size / 1.7), transparent 0),
-                      linear-gradient(45deg, $booFaceColor ($size / 1.7), transparent 0);
-  }
-}
-.container {
-  font-family: 'Varela Round', sans-serif;
-  color: $booFaceColor;
-  position: relative;
-  height: 100%;
+.containerzx {
+  background: #34495e;
   text-align: center;
-  font-size: $jaggedDistance / 2;
-  z-index: 999;
-  h1 {
-    font-size: $jaggedDistance;
-    margin-top: $jaggedDistance;
+  font-family: "Droid Sans", sans-serif;
+  z-index: 99999999999;
+  min-height: 100vh;
+}
+.hache1 {
+  
+  color: #ecf0f1;
+  text-shadow: 0px 2px 0px rgba(150, 150, 150, 1);
+  z-index: 99999;
+  margin-top: 10px;
+}
+.hache3 {
+  color: skyblue;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:hover{
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
   }
 }
-
-.boo-wrapper {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  z-index: 999;
-  transform: translate(-50%, 28%);
-  padding-top: $jaggedDistance * 2;
-  padding-bottom: $jaggedDistance * 2;
+#err-icon {
+  font-size: 80pt;
+  color: #bdc3c7;
+  margin-top: 20%;
+  text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+  -webkit-transition: 0.5s;
+  z-index: 99999;
+  cursor: pointer;
+}
+#err-icon:hover {
+  -webkit-transform: scale(1.1);
+  color: #e74c3c;
+  text-shadow: 0px 3px 0px rgba(192, 57, 43, 1);
+}
+.pe {
+  color: rgba(189, 195, 199, 1);
+  font-weight: bold;
+  z-index: 99999;
+  margin-top: 10px;
 }
 
-.boo {
-  width: $booSize;
-  height: $booSize + ($booSize * .15);
-  background-color: $booBg;
-  margin-left: auto;
-  z-index: 999;
-  margin-right: auto;
-  border: (($jaggedDistance / 1.65)  - ($jaggedDistance /2)) solid $booFaceColor;
-  border-bottom: 0;
-  overflow: hidden;
-  border-radius: ($booSize / 2) ($booSize / 2) 0 0;
-  box-shadow: -($jaggedDistance / 2) 0 0 2px rgba($booShadow, .5) inset;
-  @include border-bottom-jagged($jaggedDistance, $bgColor);
-  animation: floating 3s ease-in-out infinite;
-
-  .face {
-    width: $booFaceSize;
-    height: $jaggedDistance / 10;
-    border-radius: 5px;
-    background-color: $booFaceColor;
-    position: absolute;
-    left: 50%;
-    bottom: $jaggedDistance + $booFaceSize;
-    transform: translateX(-50%);
-    
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      width: $booFaceSize / 4;
-      height: $booFaceSize / 4;
-      background-color: $booFaceColor;
-      border-radius: 50%;
-      position: absolute;
-      bottom: $jaggedDistance + ($booFaceSize / 3);
-    }
-    
-    &::before {
-      left: -$booFaceSize;
-    }
-    
-    &::after {
-      right: -$booFaceSize;
-    }
-  } 
+@media screen and (max-width: 735px) {
+  .containerzx {
+    background: #34495e;
+    text-align: center;
+    font-family: "Droid Sans", sans-serif;
+    z-index: 99999999999;
+ 
+  }
+  #err-icon {
+    font-size: 80pt;
+    color: #bdc3c7;
+    margin-top: 72%;
+    text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+    -webkit-transition: 0.5s;
+    z-index: 99999;
+  }
 }
-
-.shadow {
-  width: $booSize - $jaggedDistance;
-  height: $jaggedDistance / 2;
-  background-color: rgba($booShadow, .75);
-  margin-top: $jaggedDistance * 1.25;  
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 50%;
-  animation: floatingShadow 3s ease-in-out infinite;
-}
-
+  
  
