@@ -127,6 +127,7 @@ $bp-lg: 900px;
   display: flex;
   align-items: center;
   overflow: hidden;
+
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -146,6 +147,7 @@ $bp-lg: 900px;
     left: 0;
     width: 100%;
     height: 110%;
+    
     background-size: cover;
     background-position: 0 0;
     transition: transform calc(var(--d) * 1.5) var(--e);
@@ -158,6 +160,7 @@ $bp-lg: 900px;
     position: absolute;
     top: 0;
     left: 0;
+    
     width: 100%;
     height: 200%;
     pointer-events: none;
@@ -181,7 +184,7 @@ $bp-lg: 900px;
       hsla(0, 0%, 0%, 0.79) 100%
     );
     transform: translateY(-50%);
-    transition: transform calc(var(--d) * 2) var(--e);
+    transition: all 0.5s ease;
   }
 }
 
@@ -190,6 +193,7 @@ $bp-lg: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   width: 100%;
   transition: transform var(--d) var(--e);
   z-index: 1;

@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-* {
-  cursor: url("https://puu.sh/j1a8v/067742b89d.ico"), default;
-}
+
 .containerzx {
   background: #34495e;
   text-align: center;
@@ -10,7 +8,6 @@
   min-height: 100vh;
 }
 .hache1 {
-  
   color: #ecf0f1;
   text-shadow: 0px 2px 0px rgba(150, 150, 150, 1);
   z-index: 99999;
@@ -21,7 +18,7 @@
   margin-top: 10px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     color: rgb(255, 255, 255);
     transition: all 0.5s ease;
   }
@@ -53,7 +50,6 @@
     text-align: center;
     font-family: "Droid Sans", sans-serif;
     z-index: 99999999999;
- 
   }
   #err-icon {
     font-size: 80pt;
@@ -64,5 +60,3 @@
     z-index: 99999;
   }
 }
-  
- 

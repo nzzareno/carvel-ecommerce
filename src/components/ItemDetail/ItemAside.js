@@ -1,15 +1,18 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useMemo, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { CarritoContext } from "../../context/CartContext";
+import Select from "react-select";
+import countryList from "react-select-country-list";
 
 const ItemAside = ({ producto }) => {
   const [quantityCarro, setQuantityCarro] = useState(0);
   const [branded] = useState(producto.brand);
-
+  const [countries, setCountries] = useState("");
   let { addToCarrito } = useContext(CarritoContext);
   let { setAddToCarrito } = useContext(CarritoContext);
   let { addItem } = useContext(CarritoContext);
+  const options = useMemo(() => countryList().getData(), []);
 
   const onAdd = (cantidadCarro) => {
     setQuantityCarro(cantidadCarro);
@@ -20,6 +23,10 @@ const ItemAside = ({ producto }) => {
     addItem(producto, cantidadCarro);
   };
 
+  const changeHandler = (countries) => {
+    setCountries(countries);
+  };
+
   return (
     <div className="container-vertical">
       <aside style={{ width: "100%" }}>
@@ -28,7 +35,9 @@ const ItemAside = ({ producto }) => {
             <h3>${producto.price}</h3>
           </div>
           <div>
-            <p>and <strong>FREE</strong> Returns</p>
+            <p>
+              and <strong>FREE</strong> Returns
+            </p>
           </div>
           <div>
             <p>
@@ -39,9 +48,13 @@ const ItemAside = ({ producto }) => {
             </p>
           </div>
           <div>
-            <small>
-              <span className="ubicacion"></span> Deliver to Argentina
-            </small>
+            <Select
+              options={options}
+              value={countries}
+              onChange={changeHandler}
+              placeholder="Select a country"
+              className="select-ubicacion"
+            />
           </div>
 
           <div>
